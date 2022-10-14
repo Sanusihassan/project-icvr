@@ -1,0 +1,103 @@
+.tablet {
+  display: none !important;
+
+  @include media(">=tablet") {
+    display: block !important;
+  }
+}
+
+.is-tablet {
+  display: none !important;
+
+  @include media(">=tablet") {
+    display: flex!important;
+  }
+}
+
+.tablet-none {
+  @include media(">=tablet") {
+    display: none !important;
+  }
+}
+
+.desktop {
+  display: none !important;
+
+  @include media(">=desktop") {
+    display: block !important;
+  }
+}
+
+.is-desktop {
+  display: none !important;
+
+  @include media(">=desktop") {
+    display: flex !important;
+  }
+}
+
+.desktop-none {
+  @include media(">=desktop") {
+    display: none !important;
+  }
+}
+.widescreen {
+  display: none !important;
+
+  @include media(">=widescreen") {
+    display: block !important;
+  }
+}
+
+.widescreen-none {
+
+  @include media(">=widescreen") {
+    display: none !important;
+  }
+}
+
+.widescreen-lg {
+  display: none !important;
+
+  @include media(">=widescreen-lg") {
+    display: block !important;
+  }
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-row {
+  display: flex;
+  align-items: center;
+}
+
+.mob-width {
+  width: 100%;
+
+  @include media(">=phone-lg") {
+    width: fit-content;
+  }
+}
+
+.desk-width {
+  width: 100%;
+
+  @include media(">=tablet-lg") {
+    width: fit-content;
+  }
+}
+
+.fit-width {
+  width: fit-content;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.flex-auto {
+  flex: auto;
+}

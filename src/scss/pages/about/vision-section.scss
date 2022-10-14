@@ -1,0 +1,135 @@
+.vision-section {
+  padding: 5rem 0 10rem;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("../images/mission-pattern-sm.svg");
+
+  @include media(">=tablet") {
+    padding: 5rem 0 16rem;
+    background-image: url("../images/abou-pattern-md.svg");
+  }
+
+  @include media(">=desktop") {
+    min-height: 100vh;
+    padding: 10rem 0 12rem;
+    background-image: none;
+  }
+}
+
+.quote {
+
+  &__wrap {
+    @include media(">=desktop") {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &__img {
+    width: 60px;
+    height: 43px;
+
+    @include media(">=tablet") {
+      width: 84px;
+      height: 60px;
+    }
+
+    @include media(">=desktop") {
+      margin-right: 4rem;
+    }
+
+    @include media(">=widescreen-lg") {
+      width: 162px;
+      height: 115px;
+      margin-right: 10rem;
+    }
+  }
+
+  &__content {
+    max-width: 54.3rem;
+    width: 100%;
+
+    @include media(">=desktop") {
+      max-width: 100%;
+    }
+  }
+
+  &__title {
+    font-size: 3.4rem;
+    font-weight: 400;
+    line-height: 1.1;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    opacity: 0.2;
+
+    @include media(">=tablet") {
+      font-size: 4.8rem;
+    }
+
+    @include media(">=widescreen-lg") {
+      font-weight: 300;
+      font-size: 6rem;
+      opacity: 0.7;
+      letter-spacing: 0.01em;
+    }
+  }
+
+  &__text {
+    font-size: 1.3rem;
+    font-weight: 400;
+    line-height: 1.35;
+    font-family: $secondary-font;
+    letter-spacing: 0.01em;
+
+    @include media(">=tablet") {
+      font-size: 1.6rem;
+      line-height: 1.4;
+      letter-spacing: 0;
+      letter-spacing: -0.01em;
+    }
+
+    @include media(">=widescreen-lg") {
+      font-size: 2.2rem;
+    }
+  }
+}
+
+.vision {
+
+  &__wrap {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__text-col {
+    @include media(">=tablet") {
+      max-width: 41.6rem;
+      margin: 0 0 0 auto;
+    }
+
+    @include media(">=widescreen-lg") {
+      margin: -13rem 0 0 auto;
+    }
+  }
+
+  &__text {
+    font-size: 1.3rem;
+    font-weight: 400;
+    line-height: 1.35;
+    font-family: $secondary-font;
+    letter-spacing: 0.1em;
+    opacity: 0.4;
+
+    @include media(">=tablet") {
+      font-size: 1.6rem;
+      line-height: 1.4;
+      letter-spacing: -0.01em;
+      opacity: 0.5;
+    }
+
+    @include media(">=widescreen-lg") {
+      font-size: 2.2rem;
+    }
+  }
+}

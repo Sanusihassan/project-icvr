@@ -1,0 +1,18 @@
+.exploration-section {
+  padding: 5rem 0 10rem;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("../images/mission-pattern-sm.svg");
+
+  @include media(">=tablet") {
+    padding: 5rem 0 11rem;
+    background-image: url("../images/abou-pattern-md.svg");
+  }
+
+  @include media(">=desktop") {
+    min-height: 100vh;
+    padding: 10rem 0 8rem;
+    background-image: url("../images/abou-pattern-lg.svg");
+  }
+}

@@ -1,0 +1,129 @@
+.article {
+
+  &__wrap {
+    @include media(">=widescreen") {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  &__body {
+    @include media(">=widescreen") {
+      width: calc(100% - 26rem);
+      max-width: 93.1rem;
+      padding-right: 3rem;
+    }
+
+    @include media(">=widescreen-lg") {
+      width: calc(100% - 75.5rem);
+    }
+  }
+
+  &__title {
+    font-size: 2.8rem;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+
+    @include media(">=tablet") {
+      font-size: 4.8rem;
+      line-height: 1.1;
+      letter-spacing: 0.05em;
+    }
+
+    @include media(">=widescreen-lg") {
+      letter-spacing: 0.01em;
+      font-size: 5.4rem;
+    }
+  }
+
+  &__text {
+    font-family: $secondary-font;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.45;
+    letter-spacing: -0.01em;
+  }
+
+  &__nav {
+    display: flex;
+
+    @include media(">=widescreen") {
+      flex-direction: column;
+    }
+
+    @include media(">=widescreen-lg") {
+      flex-direction: row;
+      width: 75.5rem;
+    }
+  }
+
+  &__btn {
+    @include media(">=tablet") {
+      min-width: 26rem;
+    }
+
+    @include media(">=widescreen-lg") {
+      &:nth-child(1) {
+        min-width: 18.5rem;
+      }
+    }
+
+    &+& {
+
+      @include media(">=desktop") {
+        margin: 0 0 0 2.5rem;
+      }
+
+      @include media(">=widescreen") {
+        margin: 2.5rem 0 0 0;
+      }
+
+      @include media(">=widescreen-lg") {
+        margin: 0 0 0 2.5rem;
+      }
+    }
+  }
+
+  &__video {
+    position: relative;
+    height: 62rem;
+    margin: 0 -3rem;
+
+    @include media(">=tablet") {
+      height: 64rem;
+      margin: 0 -5rem;
+    }
+
+    @include media(">=widescreen-lg") {
+      height: 85rem;
+      margin: 0;
+    }
+
+    .video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: $base-transition;
+    }
+  }
+
+  &__video-btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.play-btn {
+  width: 25rem;
+  height: 25rem;
+  transition: $base-transition;
+
+  @include media(">=widescreen-lg") {
+    width: 29rem;
+    height: 29rem;
+  }
+}

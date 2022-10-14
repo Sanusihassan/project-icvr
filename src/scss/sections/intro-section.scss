@@ -1,0 +1,282 @@
+.intro-section {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("../images/game-intro-sm.webp");
+  height: 79.1rem;
+  padding: 13.7rem 0 7.5rem;
+
+  @include media(">=tablet") {
+    background-image: url("../images/game-intro-md.webp");
+    height: 105.8rem;
+    padding: 16rem 0 14.2rem;
+  }
+
+  @include media(">=desktop") {
+    height: 58vw;
+    background-image: url("../images/game-intro-lg.webp");
+  }
+
+  @include media(">=1640px") {
+    padding: 28.5rem 0 13rem;
+    height: 112.6rem;
+  }
+}
+
+.intro-section-second {
+  @include media(">=desktop") {
+    height: 58vw;
+    background-image: url("../images/game-intro-lg-2.webp");
+  }
+}
+
+.intro-home-section {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("../images/home-intro-sm.webp");
+  height: 82.1rem;
+  padding: 13.7rem 0 5.7rem;
+
+  &__active {
+    background-size: 125%;
+  }
+
+  &.videoStarted{
+    background: #20202C;
+  }
+  &.scrolled {
+    width: 60%;
+    transform-origin: center;
+    transform: rotate(180deg);
+  }
+
+  @include media(">=tablet") {
+    background-image: url("../images/home-intro-md.webp");
+    height: 108rem;
+    padding: 16rem 0 9rem;
+  }
+
+  @include media(">=desktop") {
+    height: auto;
+    min-height: 100vh;
+    max-height: 110.2rem;
+    background-image: url("../images/home-intro-lg.webp");
+  }
+
+  @include media(">=1640px") {
+    padding: 20rem 0 8rem;
+    min-height: auto;
+    height: 100vh;
+  }
+}
+
+.intro-about-section {
+  background-image: url("../images/about-intro-sm.webp");
+  padding: 13.7rem 0 6rem;
+
+  @include media(">=tablet") {
+    background-image: url("../images/about-intro-md.webp");
+    padding: 14rem 0 6rem;
+  }
+
+  @include media(">=desktop") {
+    padding: 10rem 0 6rem;
+    background-image: url("../images/about-intro-lg.webp");
+  }
+
+  @include media(">=1640px") {
+    height: 107.8rem;
+    padding: 14rem 0 8rem;
+    background-image: url("../images/about-intro-hd.webp");
+  }
+
+  .intro {
+    @include media(">=desktop") {
+      margin-top: auto;
+    }
+  }
+}
+
+.intro {
+  justify-content: space-between;
+
+  @include media(">=desktop") {
+    justify-content: start;
+  }
+
+  @include media(">=widescreen") {
+    padding-left: 8rem;
+  }
+
+  &--padding {
+    @include media(">=widescreen") {
+      padding-left: 0;
+    }
+
+    .intro__head {
+      @include media(">=widescreen") {
+        padding-left: 8rem;
+      }
+    }
+
+  }
+
+  &__head {
+    margin-right: -2px;
+
+    @include media(">=tablet") {
+      margin-right: 0;
+    }
+  }
+
+  &__text-wrap {
+    max-width: 39rem;
+
+    .base-text {
+      margin-bottom: 1.5rem;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    @include media(">=desktop") {
+      max-width: 43rem;
+    }
+  }
+
+  &__btn {
+    @include media(">=tablet") {
+      min-width: 31.5rem;
+    }
+  }
+
+  &__footer {
+    flex-direction: column;
+    align-items: center;
+
+    @include media(">=desktop") {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+
+  &__contacts {
+    width: 100%;
+
+    .contact {
+      margin-right: 30px;
+
+      @include media(">=widescreen") {
+        margin-right: 60px;
+      }
+    }
+  }
+
+  &__soc {
+    display: flex;
+    justify-content: center;
+
+    @include media(">=desktop") {
+      justify-content: flex-end;
+    }
+  }
+}
+
+.introPlay {
+  &__playButton {
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+    top: 7.3%;
+    opacity: 0;
+    animation: fadeIn 1s ease-in both;
+  }
+
+  &__playSE {
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+    top: 5.7%;
+    animation-delay: .5s;
+    animation: scale 1s ease-out;
+  }
+
+  &__playBE {
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+    top: 5%;
+    animation-delay: 1s;
+    animation: scale 1.5s ease-out;
+  }
+}
+
+.introPlay__playSE.active {
+  left: 50%;
+  transition: $base-transition;
+  top: 3.7%;
+}
+
+.introPlay__playBE.active {
+  left: 50%;
+  transition: $base-transition;
+  top: 3%;
+}
+
+.introPlay__playButton.active {
+  left: 50%;
+  transition: $base-transition;
+  top: 5.3%;
+}
+
+.introPlay__playSE.hidden, .introPlay__playBE.hidden, .introPlay__playButton.hidden{
+  display: none;
+}
+
+@keyframes scale {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.caseStudies {
+  //width: 70vw;
+  //max-width: 300px;
+  text-align: center;
+  //left: 50%;
+  margin-top: 25%;
+  position: relative;
+  perspective: 1000px;
+  //transform: translate3d(-50%,-50%,600px);
+  /* ^^^ 600px for safari hack */
+  transform-style: preserve-3d;
+  display: flex;
+  align-items: center;
+  @include media("<=tablet") {
+    margin-top: 85%;
+    margin-bottom: 100%;
+  }
+}
+
+.study-case {
+    margin: auto;
+    //width: 100%;
+    position: absolute;
+    cursor: pointer; 
+}

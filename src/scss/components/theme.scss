@@ -1,0 +1,279 @@
+.theme-light {
+  body {
+    background-color: #fff;
+  }
+
+  .light-wrapper {
+    background-size: 100%;
+    background-position: center;
+    background-repeat: repeat-y;
+    background-image: url("../images/light-pattern.svg");
+  }
+
+  .theme-color {
+    color: #211E1E;
+  }
+
+  .theme-mob-color {
+    color: #211E1E;
+
+    @include media(">=desktop") {
+      color: $white;
+    }
+  }
+
+  .theme-wrap {
+    border: 1px solid #5956AB;
+  }
+
+  .light-img {
+    display: block;
+  }
+
+  .dark-img {
+    display: none;
+  }
+
+  .theme-border {
+    border-color: $light-border;
+  }
+
+  .theme-bg {
+    background-color: $white;
+  }
+
+  .nav {
+    @include media(">=desktop") {
+      background-color: transparent;
+    }
+  }
+
+  .burger.active {
+    .burger__close {
+      &.light {
+        display: none;
+      }
+
+      &.dark {
+        display: block;
+      }
+    }
+  }
+
+  .footer--home {
+    border-color: #E9E9EA;
+  }
+
+  .soc-link {
+    opacity: 0.5;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  .btn.tertiary {
+    color: #211E1E;
+    border-color: rgba(32, 32, 44, 0.2);
+
+    &:hover {
+      background-color: rgba(32, 32, 44, 0.06);
+    }
+  }
+
+  .subscr-banner__wrap {
+
+    @include media(">=tablet") {
+      border: none;
+
+      &::after {
+        border: 1px solid rgba(32, 32, 44, 0.1);
+        border-radius: 18px;
+        background-image: none;
+        background-color: $white;
+        transform: translate(-50%, -50%) rotate(-1deg);
+        z-index: -1;
+      }
+
+      &::before {
+        background: #2B2B38;
+        opacity: 0.05;
+        left: -2px;
+        transform: rotate(0.5deg) translateY(-50%);
+        height: 103%;
+      }
+    }
+  }
+
+  .case__images {
+    &::-webkit-scrollbar-thumb {
+      background-color: $light-border;
+    }
+  }
+
+  .form__input {
+    color: #211E1E;
+
+    &::placeholder {
+      color: rgba(32, 32, 44, 0.5)
+    }
+  }
+
+  .pros-list__item::before {
+    background: #383843;
+  }
+
+  .pros-list__item.active::before {
+    background: #211E1E;
+  }
+
+  .top-event__wrap {
+    @include media(">=widescreen") {
+      border-radius: 12px;
+      overflow: hidden;
+    }
+  }
+
+  .event-card__wrap {
+    border-color: rgba(32, 32, 44, 0.2);
+  }
+
+  .date-status {
+    background-color: rgba(33, 30, 30, 0.1);
+  }
+
+  .contacts-section {
+    background-image: url("../images/contacts-l-bg-sm.svg");
+
+    @include media(">=tablet") {
+      background-image: url("../images/contacts-l-bg-md.svg");
+    }
+
+    @include media(">=desktop") {
+      background-image: url("../images/contacts-l-bg-lg.svg");
+    }
+  }
+
+  .policy-bar {
+    border: 1px solid rgba(33, 30, 30, 0.2);
+    background: transparent;
+  }
+
+  .policy-link {
+    opacity: 0.3;
+  }
+
+  .policy-item.active {
+    .policy-link {
+      color: #211E1E;
+      opacity: 1;
+    }
+  }
+
+  .tabs__header-wrap:after {
+    background: linear-gradient(90deg, rgba(33, 30, 30, 0.01) 0%, #211E1E 34.91%, rgba(33, 30, 30, 0.01));
+
+    @include media(">=widescreen") {
+      background-image: url('../images/tab-circle-l.svg');
+      opacity: 1;
+    }
+  }
+
+  .tabs__btn {
+    opacity: 0.15;
+
+    &::after {
+      background-color: #211E1E;
+    }
+
+    &:hover,
+    &.active {
+      opacity: 1;
+    }
+  }
+
+  .select__head {
+    &::after {
+      @include background-svg('<svg width="14" height="9" viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13 1.99561L7 7.9956L1 1.99561" stroke="#211E1E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>')
+    }
+  }
+
+  .select__list {
+    display: flex;
+    flex-direction: column;
+    background-color: $white;
+    border-color: $light-border;
+  }
+
+  .select__item {
+    &.active {
+      background-color: rgba(89, 86, 171, 0.12);
+    }
+  }
+
+  .popup--thank {
+    .popup__wrapper {
+      background-image: url("../images/popup-decor-sm-l.svg");
+
+      @include media(">=tablet") {
+        background-image: url("../images/popup-decor-md-l.svg");
+      }
+
+      @include media(">=desktop") {
+        background-image: url("../images/thank-bg-lg-l.webp");
+      }
+
+      @include media(">=1640px") {
+        background-image: url("../images/thank-bg-xxl-l.webp");
+      }
+    }
+  }
+
+  .form-nav__number-wrap {
+    background-color: rgba(89, 86, 171, 0.9);
+    border-color: $btn-bg;
+  }
+
+  .nav-bullet {
+    background-color: $btn-bg;
+  }
+
+  .form-file {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    &:hover {
+      .form-file__icon {
+        path {
+          fill: #211E1E;
+        }
+      }
+
+      .form-file__title {
+        color: #211E1E;
+      }
+
+      .form-file__text {
+        opacity: 1;
+      }
+    }
+  }
+
+  .craft-section {
+    background: linear-gradient(270deg, #FFFFFF 13.42%, #F5F5F5 100%);
+
+    &::after {
+      background: #FFFFFF;
+      border-radius: 4px;
+      width: 100%;
+      height: 80%;
+      top: 50%;
+      transform: translateY(-50%)  matrix(1, -0.03, 0.05, 1, 0, 0);
+    }
+  }
+}
+
+.light-img {
+  display: none;
+}

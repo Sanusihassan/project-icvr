@@ -1,0 +1,300 @@
+// margin
+
+.m {
+  &-0 {
+    margin: 0 !important;
+  }
+
+  &-auto {
+    margin: auto !important;
+  }
+
+  &t {
+    &-05 {
+      margin-top: $indent / 2 !important;
+    }
+
+    &-1 {
+      margin-top: $indent !important;
+    }
+
+    &-15 {
+      margin-top: $indent * 1.5 !important;
+    }
+
+    &-2 {
+      margin-top: $indent * 2 !important;
+    }
+
+    &-3 {
+      margin-top: $indent * 3 !important;
+    }
+
+    &-4 {
+      margin-top: $indent * 4 !important;
+    }
+
+    &-5 {
+      margin-top: $indent * 5 !important;
+    }
+
+    &-auto {
+      margin-top: auto !important;
+    }
+  }
+
+  &r {
+    &-05 {
+      margin-right: $indent / 2 !important;
+    }
+
+    &-1 {
+      margin-right: $indent !important;
+    }
+
+    &-15 {
+      margin-right: $indent * 1.5 !important;
+    }
+
+    &-2 {
+      margin-right: $indent * 2 ;
+    }
+
+    &-25 {
+      margin-right: $indent * 2.5 !important;
+    }
+
+    &-3 {
+      margin-right: $indent * 3 !important;
+    }
+
+    &-4 {
+      margin-right: $indent * 4 !important;
+    }
+
+    &-5 {
+      margin-right: $indent * 5 !important;
+    }
+
+    &-auto {
+      margin-right: auto !important;
+    }
+  }
+
+  &b {
+    &-0 {
+      margin-bottom: 0 !important;
+    }
+
+    &-05 {
+      margin-bottom: $indent / 2 !important;
+    }
+
+    &-1 {
+      margin-bottom: $indent !important;
+    }
+
+    &-15 {
+      margin-bottom: $indent * 1.5 !important;
+    }
+
+    &-2 {
+      margin-bottom: $indent * 2 !important;
+    }
+
+    &-25 {
+      margin-bottom: $indent * 2.5 !important;
+    }
+
+    &-3 {
+      margin-bottom: $indent * 3 !important;
+    }
+
+    &-35 {
+      margin-bottom: $indent * 3.5 !important;
+    }
+
+    &-4 {
+      margin-bottom: $indent * 4 !important;
+    }
+
+    &-5 {
+      margin-bottom: $indent * 5 !important;
+    }
+
+    &-6 {
+      margin-bottom: $indent * 6 !important;
+    }
+    
+    &-9 {
+      margin-bottom: $indent * 9 !important;
+    }
+
+    &-10 {
+      margin-bottom: $indent * 10 !important;
+    }
+
+    &-auto {
+      margin-bottom: auto !important;
+    }
+  }
+
+  &l {
+    &-05 {
+      margin-left: $indent / 2 !important;
+    }
+
+    &-1 {
+      margin-left: $indent !important;
+    }
+
+    &-15 {
+      margin-left: $indent * 1.5 !important;
+    }
+
+    &-2 {
+      margin-left: $indent * 2 !important;
+    }
+
+    &-3 {
+      margin-left: $indent * 3 !important;
+    }
+
+    &-35 {
+      margin-left: $indent * 3.5 !important;
+    }
+
+    &-4 {
+      margin-left: $indent * 4 !important;
+    }
+
+    &-5 {
+      margin-left: $indent * 5 !important;
+    }
+
+    &-auto {
+      margin-left: auto !important;
+    }
+  }
+
+  &x {
+    &-auto {
+      margin-left: auto !important;
+      margin-right: auto !important;
+    }
+  }
+
+  &y {
+    &-auto {
+      margin-top: auto !important;
+      margin-bottom: auto !important;
+    }
+  }
+}
+
+@include media(">=tablet") {
+  .m {
+    &b-md-0 {
+      margin-bottom:  0 !important;
+    }
+    &b-md-15 {
+      margin-bottom: $indent * 1.5 !important;
+    }
+    &b-md-2 {
+      margin-bottom: $indent * 2 !important;
+    }
+    &b-md-25 {
+      margin-bottom: $indent * 2.5 !important;
+    }
+    &b-md-3 {
+      margin-bottom: $indent * 3 !important;
+    }
+    &b-md-4 {
+      margin-bottom: $indent * 4 !important;
+    }
+    &b-md-6 {
+      margin-bottom: $indent * 6 !important;
+    }
+    &b-md-8 {
+      margin-bottom: $indent * 8 !important;
+    }
+    &b-md-10 {
+      margin-bottom: $indent * 10 !important;
+    }
+    &b-md-12 {
+      margin-bottom: $indent * 12 !important;
+    }
+    &b-md-18 {
+      margin-bottom: $indent * 18 !important;
+    }
+  }
+}
+
+@include media(">=desktop") {
+  .m {
+    &r-lg-3 {
+      margin-right: $indent * 3 !important;
+    }
+    &b-lg-0 {
+      margin-bottom: 0 !important;
+    }
+    &b-lg-15 {
+      margin-bottom: $indent * 1.5 !important;
+    }
+    &b-lg-2 {
+      margin-bottom: $indent * 2 !important;
+    }
+    &b-lg-25 {
+      margin-bottom: $indent * 2.5 !important;
+    }
+    &b-lg-6 {
+      margin-bottom: $indent * 6 !important;
+    }
+  }
+}
+
+@include media(">=widescreen") {
+  .m {
+    &b-xl-0 {
+      margin-bottom: 0 !important;
+    }
+    &r-xl-3 {
+      margin-right: $indent * 3 !important;
+    }
+    &r-xl-4 {
+      margin-right: $indent * 4 !important;
+    }
+    &b-xl-3 {
+      margin-bottom: $indent * 3 !important;
+    }
+    &b-xl-4 {
+      margin-bottom: $indent * 4 !important;
+    }
+    &b-xl-5 {
+      margin-bottom: $indent * 5 !important;
+    }
+    &b-xl-6 {
+      margin-bottom: $indent * 6 !important;
+    }
+    &b-xl-8 {
+      margin-bottom: $indent * 8 !important;
+    }
+    &b-xl-10 {
+      margin-bottom: $indent * 10 !important;
+    }
+    &b-xl-14 {
+      margin-bottom: $indent * 14 !important;
+    }
+    &b-xl-20 {
+      margin-bottom: $indent * 20 !important;
+    }
+  }
+}
+
+@include media(">=widescreen-lg") {
+  .m {
+    &b-xxl-6 {
+      margin-bottom: $indent * 6 !important;
+    }
+  }
+}

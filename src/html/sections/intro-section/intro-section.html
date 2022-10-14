@@ -1,0 +1,85 @@
+<section class="intro-home-section flex-column" id="intro-home-section">
+  <div class="container flex-column flex-auto">
+    <div class="intro flex-column flex-auto intro--padding">
+      <div class="intro__hea mt-auto mb-md-10 mb-lg-25" id="introSection">
+        <h1 class="main-title mb-2 mb-md-25 mb-lg-2">
+          Cutting Edge <br />
+          Software Art, <br />
+          and Games
+        </h1>
+        <p class="base-text mb-1 mb-md-15">
+          Our award-winning team offers full-cycle <br />
+          creative and digital production services <br />
+          built on game engines.
+        </p>
+        <p class="base-text">
+          If it’s never been done before, <br />
+          then it’s our type of project.
+        </p>
+        <button class="btn primary mt-3" id="bookconsultation">Book a consultation</button>
+      </div>
+      </iframe>
+      <iframe class="backgroundVideo"
+        src="https://player.vimeo.com/video/744452008?h=873c7bc180&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&amp;autoplay=1&amp;background=1"
+        frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen="" title="ICVR_REEL_2022_Final"
+        data-ready="true" style="pointer-events:none;">
+      </iframe>
+      <script>
+        var iframe = document.querySelector('iframe');
+        var iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
+        iframeDoc.body.style.cursor = 'none';
+      </script>
+      <div class="introPlay">
+        <img src="assets/images/homepage/play_button.svg" alt="" class="introPlay__playButton" />
+        <img src="assets/images/homepage/play_button_small_ellipse.svg" alt="" class="introPlay__playSE" />
+        <img src="assets/images/homepage/play_button_big_ellipse.svg" alt="" class="introPlay__playBE" />
+      </div>
+      <div class="intro__footer mt-auto mb-0 is-tablet">
+        <div class="intro__contacts flex-row mb-5 mb-lg-0">
+          <div class="contact">
+            <div class="contact__icon">
+              <img src="assets/images/local.svg" alt="" />
+            </div>
+            <div class="contact__body">
+              <span class="contact__name">Head office</span>
+              <a href="#" class="contact__link">Los Angeles, California</a>
+            </div>
+          </div>
+          <div class="contact">
+            <div class="contact__icon">
+              <img src="assets/images/email.svg" alt="" />
+            </div>
+            <div class="contact__body">
+              <span class="contact__name">Email</span>
+              <a href="#" class="contact__link">info@icvr.io</a>
+            </div>
+          </div>
+          <div class="contact">
+            <div class="contact__icon">
+              <img src="assets/images/phone.svg" alt="" />
+            </div>
+            <div class="contact__body">
+              <span class="contact__name">Phone</span>
+              <a href="#" class="contact__link">+1 (310) 489-0185</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="intro__soc">
+          <a href="#" class="soc-link icon-wrap color-white">
+            @@include('../../images/fb.svg')
+          </a>
+          <a href="#" class="soc-link icon-wrap color-white">
+            @@include('../../images/tw.svg')
+          </a>
+          <a href="#" class="soc-link icon-wrap color-white">
+            @@include('../../images/inst.svg')
+          </a>
+          <a href="#" class="soc-link icon-wrap color-white">
+            @@include('../../images/in.svg')
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

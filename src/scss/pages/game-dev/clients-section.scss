@@ -1,0 +1,120 @@
+.clients-section {
+  padding: 8rem 0;
+
+  @include media(">=tablet") {
+    padding: 12rem 0;
+  }
+
+  @include media(">=widescreen") {
+    padding: 16rem 0;
+  }
+}
+
+.clients-home-section {
+  padding: 2rem 0 8rem;
+
+  @include media(">=tablet") {
+    padding: 2rem 0 12rem;
+  }
+
+  @include media(">=widescreen") {
+    padding: 2rem 0 4.6rem;
+  }
+}
+
+.clients-scroll {
+  overflow: hidden;
+  overflow-x: auto;
+  margin: 0 -4rem;
+  scrollbar-width: none;
+
+  @include media(">=widescreen") {
+    margin: 0;
+  }
+
+  &::-webkit-scrollbar,
+  &::-webkit-scrollbar-thumb {
+    display: none !important;
+    background-color: transparent;
+  }
+}
+
+.clients-rotate {
+  overflow: hidden;
+  overflow-x: auto;
+  margin: 0 -4rem;
+  position: relative;
+  
+  @include media(">=tablet") {
+    transform: rotate(-2deg);
+  }
+  
+  &::-webkit-scrollbar,
+  &::-webkit-scrollbar-thumb {
+    background-color: transparent !important;
+  }
+
+  &::-webkit-scrollbar {
+    display: block;
+    height: 30px;
+  }
+
+  .clients-row {
+    width: max-content;
+  }
+}
+
+.clients-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  width: max-content;
+
+  @include media(">=widescreen") {
+    margin: 0 -7.5rem;
+    width: auto;
+  }
+
+  .client-col {
+    padding: 0 4rem;
+    width: auto;
+    flex: none;
+
+    @include media(">=widescreen") {
+      padding: 0 7.5rem;
+    }
+  }
+}
+
+.client {
+  width: auto;
+  height: 7rem;
+  display: block;
+  flex: none;
+
+  @include media(">=widescreen") {
+    height: 10rem;
+  }
+
+  &--small {
+    height: 3.6rem;
+
+    @include media(">=widescreen") {
+      height: 5.2rem;
+    }
+  }
+
+  &--medium {
+    height: 4.4rem;
+
+    @include media(">=widescreen") {
+      height: 8rem;
+    }
+  }
+
+  img {
+    height: 100%;
+    width: auto;
+  }
+}

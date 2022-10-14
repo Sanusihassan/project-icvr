@@ -1,0 +1,72 @@
+<header class="header">
+  <div class="container">
+    <a href="home-page.html" class="logo">
+      <picture class="dark-img">
+        <source media="(min-width: 1024px)" srcset="assets/images/logo-desk.svg">
+        <img src="assets/images/logo-mob.svg" alt="logo">
+      </picture>
+      <picture class="light-img">
+        <source media="(min-width: 1024px)" srcset="assets/images/logo-desk-l.svg">
+        <img src="assets/images/logo-mob.svg" alt="logo">
+      </picture>
+    </a>
+
+    <div class="nav theme-bg js-burger">
+      <div class="theme-wrap js-theme-switch">
+        <button type="button" class="theme-btn js-theme-dark active">
+          <img class="dark-img" src="assets/images/theme-1.svg" alt="">
+          <img class="light-img" src="assets/images/theme-1-l.svg" alt="">
+        </button>
+        <button type="button" class="theme-btn js-theme-light">
+          <img src="assets/images/theme-2.svg" alt="">
+        </button>
+      </div>
+
+      <nav class="menu">
+        <ul class="menu__list">
+          <li class="menu__item">
+            <span class="menu__link theme-color">Services</span>
+            <ul class="sub-menu">
+              <li class="sub-menu__item">
+                <a href="#" class="sub-menu__link theme-color">Immersive</a>
+              </li>
+              <li class="sub-menu__item">
+                <a href="#" class="sub-menu__link theme-color">Virtual Production</a>
+              </li>
+              <li class="sub-menu__item">
+                <a href="#" class="sub-menu__link theme-color">Game Development</a>
+              </li>
+              <li class="sub-menu__item">
+                <a href="#" class="sub-menu__link theme-color">ICTools</a>
+              </li>
+            </ul>
+          </li>
+          <li class="menu__item">
+            <span class="menu__link theme-color">Media</span>
+            <ul class="sub-menu">
+              <li class="sub-menu__item">
+                <a href="#" class="sub-menu__link theme-color">Blog</a>
+              </li>
+              <li class="sub-menu__item">
+                <a href="#" class="sub-menu__link theme-color">Podcast</a>
+              </li>
+            </ul>
+          </li>
+          <li class="menu__item">
+            <a href="#" class="menu__link theme-color">About Us </a>
+          </li>
+          <li class="menu__item">
+            <a href="#" class="menu__link theme-color">Events</a>
+          </li>
+        </ul>
+      </nav>
+
+      <button class="btn primary">Book a consultation</button>
+    </div>
+    <div class="burger js-burger-open">
+      <img class="burger__open" src="assets/images/burger.svg" alt="">
+      <img class="burger__close light" src="assets/images/burger-close.svg" alt="">
+      <img class="burger__close dark" src="assets/images/burger-close-l.svg" alt="">
+    </div>
+  </div>
+</header>

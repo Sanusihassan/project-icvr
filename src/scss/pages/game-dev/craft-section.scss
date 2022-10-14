@@ -1,0 +1,280 @@
+.craft-section {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("../images/craft-bg-mob.svg");
+  padding: 7rem 0;
+  position: relative;
+  z-index: 2;
+
+  @include media(">=tablet") {
+    padding: 10.4rem 0 8rem;
+    background-image: url("../images/craft-bg-sm.svg");
+  }
+
+  @include media(">=desktop") {
+    padding: 7rem 0;
+    background-image: url("../images/craft-bg-lg.svg");
+    background-size: 100%;
+  }
+
+  @include media(">=full-hd") {
+    padding: 14rem 0;
+  }
+
+  &:after {
+    @include media(">=desktop") {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      width: 25%;
+      background: linear-gradient(270deg, #20202C 13.42%, rgba(32, 32, 44, 0) 100%);
+    }
+  }
+
+  .case-subtitle {
+    opacity: 0.3;
+    font-weight: 500;
+
+    @include media(">=tablet") {
+      font-weight: 300;
+    }
+
+    @include media(">=desktop") {
+      font-weight: 400;
+      font-size: 1.7rem;
+      line-height: 1.6;
+      opacity: 0.8
+    }
+  }
+}
+
+.craft {
+  &__wrap {
+    position: relative;
+    z-index: 2;
+    padding-bottom: 10rem;
+
+    @include media(">=desktop") {
+      display: flex;
+      align-items: center;
+      padding-bottom: 0;
+    }
+
+    @include media(">=widescreen") {
+      padding-left: 8rem;
+    }
+
+    @include media(">=widescreen-lg") {
+      padding-left: 13rem;
+    }
+  }
+
+  &__content {
+    flex: none;
+
+    @include media(">=desktop") {
+      width: 46.8rem;
+      padding-right: 10rem;
+    }
+
+    @include media(">=widescreen-lg") {
+      width: 64rem;
+      padding-right: 19.8rem;
+    }
+  }
+
+  &__img {
+    width: 9.6rem;
+    height: auto;
+
+    @include media(">=tablet") {
+      width: 15.5rem;
+    }
+
+    @include media(">=widescreen-lg") {
+      width: 18.2rem;
+    }
+  }
+
+  &__btn {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+
+    @include media(">=tablet") {
+      min-width: 31.5rem;
+    }
+
+    @include media(">=desktop") {
+      width: fit-content;
+      min-width: 34.6rem;
+      position: static;
+      transform: none;
+      left: auto;
+    }
+  }
+
+  &__swiper {
+    position: relative;
+
+    @include media(">=desktop") {
+      width: max-content;
+      margin-right: -5rem;
+      padding: 0 2.8rem;
+      display: flex;
+      justify-content: center;
+    }
+
+    @include media(">=widescreen-lg") {
+      width: calc(100% - 64rem);
+      padding: 0 10rem;
+    }
+
+    .swiper-button-prev,
+    .swiper-button-next {
+      width: 3rem;
+      top: 50%;
+      height: 25rem;
+      display: none;
+      margin: 0;
+      transform: translateY(-50%);
+
+      @include media(">=desktop") {
+        display: block;
+      }
+
+      @include media(">=full-hd") {
+        width: 4rem;
+        height: 41.5rem;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      &:after {
+        display: none;
+      }
+    }
+
+    .swiper-button-prev {
+      left: 0;
+    }
+
+    .swiper-button-next {
+      transform: translateY(-50%) rotate(180deg);
+      left: 42.5rem;
+
+      @include media(">=widescreen-lg") {
+        left: 58rem;
+      }
+    }
+  }
+}
+
+.proj-swiper {
+  position: relative;
+  width: calc(100% + 29rem);
+  margin-left: -14.5rem;
+  margin-right: -14.5rem;
+  padding-right: 14.5rem;
+  min-height: 40rem;
+
+  @include media(">=tablet") {
+    width: 100%;
+    margin: 0 -5rem;
+    padding: 0 5rem;
+    min-height: 47.5rem;
+  }
+
+  @include media(">=desktop") {
+    margin: 0;
+    padding: 0;
+  }
+
+  @include media(">=full-hd") {
+    width: 58rem;
+  }
+
+  .swiper-wrapper {
+    align-items: center;
+  }
+
+  .swiper-slide {
+    width: 30rem;
+    height: 30rem;
+    flex: none;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.4s ease;
+    padding: 1.5rem;
+    box-sizing: border-box;
+
+    @include media(">=tablet") {
+      width: 34rem;
+      height: 34rem;
+    }
+
+    @include media(">=desktop") {
+      padding: 2rem;
+    }
+
+    @include media(">=full-hd") {
+      width: 58rem;
+      height: 58rem;
+      padding: 2rem;
+    }
+
+    img {
+      border-radius: 50%;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .swiper-slide {
+    @include media(">=desktop") {
+      opacity: 0;
+      z-index: -1;
+      pointer-events: none;
+      visibility: hidden;
+    }
+  }
+
+  .swiper-slide-active {
+    width: 40rem;
+    height: 40rem;
+    padding: 2rem;
+
+    @include media(">=tablet") {
+      width: 47.5rem;
+      height: 47.5rem;
+    }
+
+    @include media(">=desktop") {
+      width: 40rem;
+      height: 40rem;
+    }
+
+    @include media(">=full-hd") {
+      width: 58rem;
+      height: 58rem;
+      padding: 2rem;
+    }
+  }
+
+  .swiper-slide-active,
+  .swiper-slide-next {
+    opacity: 1;
+    pointer-events: all;
+    z-index: 1;
+    visibility: visible;
+  }
+}

@@ -1,0 +1,38 @@
+// Breakpoints
+$breakpoints: (
+  'phone-sm': 320px,
+  'phone-md': 375px,
+  'phone': 480px,
+  'phone-lg': 576px, 
+  'tablet': 768px,
+  'tablet-lg': 992px,
+  'desktop': 1024px,
+  'widescreen': 1200px,
+  'widescreen-md': 1360px,
+  'widescreen-lg': 1440px,
+  'full-hd': 1920px,
+);
+
+// Colors
+$black: #000000;
+$white: #FFFFFF;
+$base-bg: #20202C;
+$section-bg: #141421;
+$btn-bg: #5956AB;
+$border: #4D4D56;
+$input-border: rgba(119, 119, 131, 0.4);
+$error: #EB4343;
+$light-border: rgba(32, 32, 44, 0.1);
+
+$success: #28A745;
+$warning: #FFC117;
+
+// Fonts
+$primary-font: 'Rubik';
+$secondary-font: 'Formular';
+
+// Other
+$base-transition: all 0.3s ease;
+
+// Indents
+$indent: 10px;

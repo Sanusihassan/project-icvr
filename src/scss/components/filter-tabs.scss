@@ -1,0 +1,40 @@
+.filter-tabs {
+  &__tabs {
+    display: flex;
+    align-items: center;
+  }
+
+  &__tab {
+    font-size: 1.4rem;
+    padding: 1.2rem;
+    cursor: pointer;
+
+    &:hover {
+      color: blue;
+    }
+
+    &.active {
+      background-color: #ccc;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__item {
+    font-size: 1.4rem;
+    padding: 1.2rem;
+    border: 1px solid #000;
+    display: none;
+
+    & + & {
+      margin-top: 1.5rem;
+    }
+
+    &.active {
+      display: block;
+    }
+  }
+}

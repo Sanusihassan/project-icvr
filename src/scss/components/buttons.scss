@@ -1,0 +1,80 @@
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+  font-size: 1.3rem;
+  line-height: 1;
+  border-radius: 1.8rem;
+  font-family: $secondary-font;
+  white-space: nowrap;
+  letter-spacing: 0.1em;
+  padding: 1rem 2.5rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  height: 6rem;
+  transition: $base-transition;
+
+  &.primary {
+    background-color: $btn-bg;
+    color: $white;
+
+    @include media(">=desktop") {
+      &:hover {
+        background-color: #6e6bb8;
+      }
+    }
+
+    &.disabled {
+      background-color: #474579;
+    }
+  }
+
+  &.secondary {
+    color: $white;
+    border: 1px solid $white;
+
+    @include media(">=desktop") {
+      &:hover {
+        background-color: rgba(225, 225, 225, 0.12);
+      }
+    }
+  }
+
+  &.tertiary {
+    color: $white;
+    border: 1px solid rgba(225, 225, 225, 0.1);
+
+    @include media(">=desktop") {
+      &:hover {
+        border-color: $white;
+      }
+    }
+  }
+
+  &.btn-calendar {
+    padding: 2rem;
+  }
+
+  &.medium {
+    @include media(">=widescreen") {
+      height: 7rem;
+    }
+  }
+
+  &.disabled {
+    color: rgba(225, 225, 225, 0.5);
+    pointer-events: none;
+  }
+}
+
+.delete-btn {
+  width: 1.2rem;
+  height: 1.2rem;
+  position: relative;
+  flex: none;
+  background-image: url("../images/delete.svg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}

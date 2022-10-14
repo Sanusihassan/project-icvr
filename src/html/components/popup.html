@@ -1,0 +1,478 @@
+<div class="overlay js-overlay"></div>
+<div class="popup js-popup" data-popup="search-popup">
+  <div class="popup__wrap">
+    <button type="button" class="popup__close fixed js-popup-close">
+      <img src="assets/images/icon-close.svg" alt="close" />
+    </button>
+    <form class="form form--search mb-4 mb-md-6" action="#">
+      <div class="form__wrap">
+        <div class="form__field theme-border theme-bg form__field--search">
+          <button type="submit" value="Search" class="form__search-btn img-wrap icon-search mr-2">
+            <img src="assets/images/search.svg" alt="" />
+          </button>
+          <input type="search" placeholder="Search" class="form__input" />
+        </div>
+      </div>
+    </form>
+    <div class="popup__scroll scroll-wrap">
+      <div class="popup__body flex-column">
+        <div class="row events-row">
+          <div class="col col-lg-6">
+            <div class="event-card">
+              <div class="event-card__wrap flex-column">
+                <span class="date-status fit-width mb-2 mb-md-3">APR 12, 2022</span>
+                <h3 class="event-card__title mb-25 mb-md-3">
+                  ICVR’S “AWAY” NAMED WINNER <br class="widescreen-lg" />
+                  OF 5 TELLY AWARDS
+                </h3>
+                <a href="media-event.html" class="link-arrow desk-width">
+                  <span class="mr-25">Go to event</span>
+                  <span class="link-arrow__icon img-wrap icon-arrow m-0 ml-auto">
+                    <img src="assets/images/icon-arrow.svg" alt="" />
+                  </span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col col-lg-6">
+            <div class="event-card">
+              <div class="event-card__wrap flex-column">
+                <span class="date-status fit-width mb-2 mb-md-3">APR 12, 2022</span>
+                <h3 class="event-card__title mb-25 mb-md-3">
+                  MESA's Hollywood Innovation<br class="widescreen-lg" />
+                  and Transformation Summit
+                </h3>
+                <a href="media-event.html" class="link-arrow desk-width">
+                  <span class="mr-25">Go to event</span>
+                  <span class="link-arrow__icon img-wrap icon-arrow m-0 ml-auto">
+                    <img src="assets/images/icon-arrow.svg" alt="" />
+                  </span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="result m-auto fit-width">
+          <div class="result__wrap flex-column">
+            <div class="result__img-none img-wrap mb-3">
+              <img src="assets/images/search-none.svg" alt="none" />
+            </div>
+            <span class="result__text">Nothing found</span>
+          </div>
+        </div>
+        <div class="result m-auto fit-width">
+          <div class="result__wrap flex-column">
+            <div class="result__img-enter img-wrap mb-3">
+              <img src="assets/images/search-enter.svg" alt="none" />
+            </div>
+            <span class="result__text">enter the query</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="popup popup--subscribe js-popup" data-popup="subscribe-popup">
+  <div class="popup__wrapper theme-bg">
+    <div class="popup__container popup__container--desk">
+      <div class="popup__head">
+        <div class="popup__logo">
+          <a href="home-page.html" class="logo">
+            <picture class="dark-img">
+              <source media="(min-width: 1024px)" srcset="assets/images/logo-desk.svg" />
+              <img src="assets/images/logo-mob.svg" alt="logo" />
+            </picture>
+            <picture class="light-img">
+              <source media="(min-width: 1024px)" srcset="assets/images/logo-desk-l.svg" />
+              <img src="assets/images/logo-mob.svg" alt="logo" />
+            </picture>
+          </a>
+        </div>
+        <button type="button" class="popup__close js-popup-close">
+          <img class="dark-img" src="assets/images/icon-close.svg" alt="close" />
+          <img class="light-img" src="assets/images/icon-close-l.svg" alt="close" />
+        </button>
+      </div>
+      <div class="popup__img popup__img--subscr mb-4 mb-lg-0 tablet desktop-none">
+        <img src="assets/images/popup-subscr-md.webp" alt="img" />
+      </div>
+      <div class="popup__scroll popup__scroll--subscr scroll-wrap">
+        <div class="popup__body flex-column">
+          <div class="popup__subscr-text mb-4 mb-xl-6">
+            <p class="small-text small-text--tablet theme-color mb-2">The future of what’s possible is here.</p>
+            <h2 class="popup__title theme-color mb-2 mb-md-3">Are you joining us?</h2>
+            <p class="base-text theme-color mb-1 mb-md-15 mb-lg-2">
+              The knowledge and insight from thought leaders <br class="tablet" />
+              in the industry are of great inspiration to us.
+            </p>
+            <p class="base-text theme-color">We want to share with you.</p>
+          </div>
+          <div class="popup__subscr-form mb-4">
+            <form action="#" class="form">
+              <div class="form__wrap">
+                <div class="form__block form__block--desk">
+                  <div class="form__field theme-border theme-bg form__field--email mb-15 mb-md-0 mb-lg-25">
+                    <input type="email" class="form__input" placeholder="Enter your email" />
+                  </div>
+                  <button type="submit" class="btn primary medium full-width disabled">Get started now</button>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="popup__subscr-text m-0 mt-auto">
+            <a href="policy.html" class="base-link theme-color fit-width mb-1 mb-md-15">PRIVACY POLICY</a>
+            <p class="sub-text opacity-05 theme-color">We respect your privacy and we won't share your information</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="popup popup--book js-popup" data-popup="book-popup">
+  <div class="popup__wrapper theme-bg">
+    <div class="popup__container popup__container--desk">
+      <div class="popup__head">
+        <div class="popup__logo">
+          <a href="home-page.html" class="logo">
+            <picture class="dark-img">
+              <source media="(min-width: 1024px)" srcset="assets/images/logo-desk.svg" />
+              <img src="assets/images/logo-mob.svg" alt="logo" />
+            </picture>
+            <picture class="light-img">
+              <source media="(min-width: 1024px)" srcset="assets/images/logo-desk-l.svg" />
+              <img src="assets/images/logo-mob.svg" alt="logo" />
+            </picture>
+          </a>
+        </div>
+        <button type="button" class="popup__close js-popup-close">
+          <img class="dark-img" src="assets/images/icon-close.svg" alt="close" />
+          <img class="light-img" src="assets/images/icon-close-l.svg" alt="close" />
+        </button>
+      </div>
+      <div class="popup__scroll popup__scroll--book scroll-wrap">
+        <div class="popup__body flex-column">
+          <div class="mb-4 mb-xl-6">
+            <h2 class="section-title theme-color mb-1 mb-md-2 mb-lg-15">
+              Book <br class="tablet-none" />
+              a consultation
+            </h2>
+            <p class="base-text theme-color">Fill out the form or call us</p>
+          </div>
+          <div class="popup__book-form">
+            <form action="#" class="form">
+              <div class="form__wrap mb-5 mb-md-4 mb-xl-6">
+                <div class="form__block-wrap">
+                  <label class="form__label theme-color mb-2">Contact Information</label>
+                  <div class="form__row">
+                    <div class="form__col">
+                      <div class="form__field theme-border theme-bg">
+                        <input type="text" class="form__input" placeholder="Full name" />
+                      </div>
+                    </div>
+                    <div class="form__col">
+                      <div class="form__field theme-border theme-bg">
+                        <input type="text" class="form__input" placeholder="Company" />
+                      </div>
+                    </div>
+                    <div class="form__col">
+                      <div class="form__field theme-border theme-bg">
+                        <input type="email" class="form__input" placeholder="Email" />
+                      </div>
+                    </div>
+                    <div class="form__col">
+                      <div class="form__field theme-border theme-bg">
+                        <input type="number" class="form__input" placeholder="Phone number" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="form__block-wrap">
+                  <label class="form__label theme-color mb-2 mb-lg-25">
+                    Services <span class="ml-1">/ What type of project are you looking to create? </span>
+                  </label>
+                  <div class="form__radios">
+                    <div class="radio-row">
+                      <label class="radio">
+                        <input type="radio" name="type" id="Immersive" class="radio__input sr-only" checked />
+                        <span class="radio__btn theme-color theme-border">Immersive</span>
+                      </label>
+                      <label class="radio">
+                        <input type="radio" name="type" id="Virtual Production" class="radio__input sr-only" />
+                        <span class="radio__btn theme-color theme-border">Virtual Production</span>
+                      </label>
+                      <label class="radio">
+                        <input type="radio" name="type" id="Game Development" class="radio__input sr-only" />
+                        <span class="radio__btn theme-color theme-border">Game Development</span>
+                      </label>
+                      <label class="radio">
+                        <input type="radio" name="type" id="ICTools" class="radio__input sr-only" />
+                        <span class="radio__btn theme-color theme-border">ICTools</span>
+                      </label>
+                      <label class="radio">
+                        <input type="radio" name="type" id="Other" class="radio__input sr-only" />
+                        <span class="radio__btn theme-color theme-border">Other</span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="form__block-wrap">
+                  <label class="form__label theme-color mb-2 mb-lg-25">Budget <span class="ml-1">/ USD</span></label>
+                  <div class="form__radios">
+                    <div class="radio-row">
+                      <label class="radio">
+                        <input type="radio" name="budget" id="> 20k" class="radio__input sr-only" checked />
+                        <span class="radio__btn theme-color theme-border">> 20k</span>
+                      </label>
+                      <label class="radio">
+                        <input type="radio" name="budget" id="20k - 50k" class="radio__input sr-only" />
+                        <span class="radio__btn theme-color theme-border">20k - 50k</span>
+                      </label>
+                      <label class="radio">
+                        <input type="radio" name="budget" id="50k - 100k" class="radio__input sr-only" checked />
+                        <span class="radio__btn theme-color theme-border">50k - 100k</span>
+                      </label>
+                      <label class="radio">
+                        <input type="radio" name="budget" id="100k+" class="radio__input sr-only" />
+                        <span class="radio__btn theme-color theme-border">100k+</span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="form__block-wrap">
+                  <label class="form__label theme-color mb-2 mb-lg-25">How did you hear about us</label>
+                  <div class="form__select">
+                    <div class="select js-select">
+                      <div class="select__head theme-bg theme-border js-select-btn">
+                        <span class="select__text color-gray">Choose your option</span>
+                      </div>
+                      <ul class="select__list js-select-list">
+                        <li class="select__item js-select-option active" data-value="op-1">
+                          <span class="select__text theme-color"> Instagram </span>
+                        </li>
+                        <li class="select__item js-select-option" data-value="op-1">
+                          <span class="select__text theme-color"> Twitter </span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <button type="submit" class="btn primary medium form__btn mob-width">Sumbit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="popup popup--thank js-popup" data-popup="thank-popup">
+  <div class="popup__wrapper theme-bg">
+    <div class="popup__container">
+      <div class="popup__head">
+        <div class="popup__logo">
+          <a href="home-page.html" class="logo">
+            <picture class="dark-img">
+              <source media="(min-width: 1024px)" srcset="assets/images/logo-desk.svg" />
+              <img src="assets/images/logo-mob.svg" alt="logo" />
+            </picture>
+            <picture class="light-img">
+              <source media="(min-width: 1024px)" srcset="assets/images/logo-desk-l.svg" />
+              <img src="assets/images/logo-mob.svg" alt="logo" />
+            </picture>
+          </a>
+        </div>
+        <button type="button" class="popup__close js-popup-close">
+          <img class="dark-img" src="assets/images/icon-close.svg" alt="close" />
+          <img class="light-img" src="assets/images/icon-close-l.svg" alt="close" />
+        </button>
+      </div>
+      <div class="popup__img popup__img--thank desktop-none">
+        <img src="assets/images/thank-md.webp" alt="Thank" />
+      </div>
+      <div class="popup__scroll popup__scroll--book scroll-wrap">
+        <div class="popup__body flex-column">
+          <div class="popup__thanks">
+            <h2 class="section-title theme-color desktop-none mb-1">Thank you</h2>
+            <h2 class="section-title theme-color desktop mb-1">Thank you, <br />your application has been accepted</h2>
+            <p class="big-text theme-color desktop-none mb-2 mb-md-25">
+              your application <br />
+              has been accepted
+            </p>
+            <p class="base-text theme-color mb-10">Our manager will contact you soon!</p>
+            <a href="home-page.html" class="btn primary medium popup__btn mob-width">Go to home page</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="popup popup--full popup--info js-popup js-wrap" data-popup="info-popup">
+  <div class="popup__wrapper theme-bg">
+    <form action="#" class="form popup__form">
+      <div class="popup__header popup__header--desk js-head">
+        <div class="popup__logo">
+          <a href="home-page.html" class="logo">
+            <picture class="dark-img">
+              <source media="(min-width: 1024px)" srcset="assets/images/logo-desk.svg" />
+              <img src="assets/images/logo-mob.svg" alt="logo" />
+            </picture>
+            <picture class="light-img">
+              <source media="(min-width: 1024px)" srcset="assets/images/logo-desk-l.svg" />
+              <img src="assets/images/logo-mob.svg" alt="logo" />
+            </picture>
+          </a>
+        </div>
+        <button type="button" class="popup__close js-popup-close">
+          <img class="dark-img" src="assets/images/icon-close.svg" alt="close" />
+          <img class="light-img" src="assets/images/icon-close-l.svg" alt="close" />
+        </button>
+      </div>
+      <div class="popup__container popup__container--desk scroll-wrap js-body">
+        <div class="popup__body flex-column">
+          <div class="mb-4 mb-xl-6">
+            <h2 class="section-title theme-color mb-1 mb-md-2 mb-lg-15">
+              Tell about <br />
+              yourself
+            </h2>
+            <p class="base-text theme-color">We will contact you when we need your talent</p>
+          </div>
+          <div class="popup__info-form">
+            <div class="form__wrap">
+              <div class="form__inner active" data-step="1">
+                <label class="form__label theme-color mb-2">Contact Information</label>
+                <div class="form__row">
+                  <div class="form__col">
+                    <div class="form__field theme-border theme-bg">
+                      <input type="text" class="form__input" placeholder="Full name" />
+                      <button type="button" class="delete-btn ml-15"></button>
+                    </div>
+                  </div>
+                  <div class="form__col">
+                    <div class="form__field theme-border theme-bg">
+                      <input type="text" class="form__input" placeholder="Company" />
+                      <button type="button" class="delete-btn ml-15"></button>
+                    </div>
+                  </div>
+                  <div class="form__col">
+                    <div class="form__field theme-border theme-bg invalid">
+                      <input type="email" class="form__input" placeholder="Email" value="username.gmail.ru" />
+                      <button type="button" class="delete-btn ml-15"></button>
+                    </div>
+                  </div>
+                  <div class="form__col">
+                    <div class="form__field theme-border theme-bg">
+                      <input type="number" class="form__input" placeholder="Phone number" />
+                      <button type="button" class="delete-btn ml-15"></button>
+                    </div>
+                  </div>
+                  <div class="form__col desktop-none">
+                    <div class="form__field theme-border theme-bg">
+                      <input type="file" class="form-file__input sr-only" id="link" />
+                      <label for="link" class="form-file upload">
+                        <span class="form-file__icon attach-icon mr-15">
+                          <svg width="16" height="20" viewBox="0 0 16 20" fill="none">
+                            <path
+                              fill-rule="evenodd"
+                              clip-rule="evenodd"
+                              d="M10.1293 12.0608H8.51718V13.7216C8.51718 14.1152 8.20967 14.432 7.82761 14.432C7.44554 14.432 7.12871 14.1152 7.12871 13.7216V12.0608H5.52592C5.14386 12.0608 4.82702 11.744 4.82702 11.3504C4.82702 10.9472 5.14386 10.6304 5.52592 10.6304H7.12871V8.9696C7.12871 8.576 7.44554 8.2592 7.82761 8.2592C8.20967 8.2592 8.51718 8.576 8.51718 8.9696V10.6304H10.1293C10.5114 10.6304 10.8282 10.9472 10.8282 11.3504C10.8282 11.744 10.5114 12.0608 10.1293 12.0608ZM15.5807 6.7392C15.18 6.7392 14.7047 6.7488 14.4158 6.7488C13.9872 6.7488 13.4281 6.7392 12.7199 6.7392C11.0146 6.7296 9.60746 5.2896 9.60746 3.5328V0.4416C9.60746 0.2016 9.42108 0 9.1788 0H4.20268C1.88235 0 0 1.9488 0 4.3296V15.4784C0 17.9744 1.97554 20 4.39837 20H11.8066C14.127 20 16 18.0704 16 15.6896V7.1712C16 6.9312 15.8136 6.7392 15.5807 6.7392Z"
+                              fill="#8F8F95"
+                            />
+                            <path
+                              d="M13.1737 4.92907C13.8232 4.93579 14.7261 4.93867 15.4921 4.93579C15.8844 4.93483 16.0839 4.45195 15.8118 4.16107C14.8277 3.10699 13.0674 1.22059 12.0601 0.14155C11.7815 -0.15701 11.2941 0.04843 11.2941 0.46219V2.99275C11.2941 4.05451 12.143 4.92907 13.1737 4.92907Z"
+                              fill="#8F8F95"
+                            />
+                          </svg>
+                        </span>
+                        <span class="flex-column">
+                          <span class="form-file__title theme-color">Leave a link to your CV</span>
+                          <span class="form-file__text theme-color mt-05 tablet">PDF, Maximum file size: 5 MB.</span>
+                        </span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form__inner" data-step="2">
+                <div class="form__block-wrap">
+                  <label class="form__label theme-color mb-2 mb-lg-25"> What company values are important to you? </label>
+                  <div class="form__field theme-border theme-bg">
+                    <input type="text" class="form__input" placeholder="Tell us about it" />
+                    <button type="button" class="delete-btn ml-15"></button>
+                  </div>
+                </div>
+                <div class="form__block-wrap">
+                  <label class="form__label theme-color mb-2 mb-lg-25"> What motivates you to achieve the best result? </label>
+                  <div class="form__field theme-border theme-bg">
+                    <input type="text" class="form__input" placeholder="Tell us about it" />
+                    <button type="button" class="delete-btn ml-15"></button>
+                  </div>
+                </div>
+              </div>
+              <div class="form__inner" data-step="3">
+                <div class="form__block-wrap">
+                  <label class="form__label theme-color mb-2 mb-lg-25"> Do you have a career plan and ambitions? </label>
+                  <div class="form__field theme-border theme-bg">
+                    <input type="text" class="form__input" placeholder="Tell us more" />
+                    <button type="button" class="delete-btn ml-15"></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="popup__footer popup__footer--desk js-footer">
+        <div class="popup__footer-top mb-5 mb-md-18 mb-lg-6">
+          <button type="submit" class="btn primary medium form__btn disable mob-width mb-lg-25 mb-xl-0 mr-xl-3">Book a consultation</button>
+          <div class="form__file-col desktop">
+            <input type="file" class="form-file__input sr-only" id="resume" />
+            <label for="resume" class="form-file upload">
+              <span class="form-file__icon attach-icon icon-wrap mr-15">
+                <svg width="16" height="20" viewBox="0 0 16 20" fill="none">
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M10.1293 12.0608H8.51718V13.7216C8.51718 14.1152 8.20967 14.432 7.82761 14.432C7.44554 14.432 7.12871 14.1152 7.12871 13.7216V12.0608H5.52592C5.14386 12.0608 4.82702 11.744 4.82702 11.3504C4.82702 10.9472 5.14386 10.6304 5.52592 10.6304H7.12871V8.9696C7.12871 8.576 7.44554 8.2592 7.82761 8.2592C8.20967 8.2592 8.51718 8.576 8.51718 8.9696V10.6304H10.1293C10.5114 10.6304 10.8282 10.9472 10.8282 11.3504C10.8282 11.744 10.5114 12.0608 10.1293 12.0608ZM15.5807 6.7392C15.18 6.7392 14.7047 6.7488 14.4158 6.7488C13.9872 6.7488 13.4281 6.7392 12.7199 6.7392C11.0146 6.7296 9.60746 5.2896 9.60746 3.5328V0.4416C9.60746 0.2016 9.42108 0 9.1788 0H4.20268C1.88235 0 0 1.9488 0 4.3296V15.4784C0 17.9744 1.97554 20 4.39837 20H11.8066C14.127 20 16 18.0704 16 15.6896V7.1712C16 6.9312 15.8136 6.7392 15.5807 6.7392Z"
+                    fill="#8F8F95"
+                  />
+                  <path
+                    d="M13.1737 4.92907C13.8232 4.93579 14.7261 4.93867 15.4921 4.93579C15.8844 4.93483 16.0839 4.45195 15.8118 4.16107C14.8277 3.10699 13.0674 1.22059 12.0601 0.14155C11.7815 -0.15701 11.2941 0.04843 11.2941 0.46219V2.99275C11.2941 4.05451 12.143 4.92907 13.1737 4.92907Z"
+                    fill="#8F8F95"
+                  />
+                </svg>
+              </span>
+              <span class="flex-column">
+                <span class="form-file__title theme-color mb-1">Upload your resume</span>
+                <span class="form-file__text theme-color">PDF, Maximum file size: 5 MB.</span>
+              </span>
+            </label>
+            <div class="form-file">
+              <span class="attach-icon img-wrap mr-2">
+                <img src="assets/images/file-icon.svg" alt="file" />
+              </span>
+              <span class="flex-column">
+                <span class="form-file__title theme-colo mb-1">resume.pdf</span>
+                <span class="form-file__text theme-colo">3.2 MB</span>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="form-nav">
+          <div class="form-nav__number-wrap is-desktop mr-2">
+            <span class="form-nav__number-currnet mr-05">1</span>
+            <div class="form-nav__number-total">/ 3</div>
+          </div>
+          <div class="form-nav__bullets">
+            <span class="nav-bullet active"></span>
+            <span class="nav-bullet"></span>
+            <span class="nav-bullet"></span>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

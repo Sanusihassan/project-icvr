@@ -1,0 +1,150 @@
+.case-section {
+  padding: 2rem 0;
+
+  @include media(">=tablet") {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url("../images/abou-pattern-md.svg");
+  }
+
+  @include media(">=1280px") {
+
+    background-image: url("../images/abou-pattern-lg.svg");
+  }
+}
+
+.case {
+  @include media(">=1280px") {
+    display: flex;
+  }
+
+  &__images {
+    margin: 0 -3rem 4rem;
+
+    &.desk {
+      display: none;
+
+      @include media(">=1280px") {
+        display: flex;
+      }
+    }
+
+    @include media(">=tablet") {
+      margin: 0 -7rem 4rem;
+      display: flex;
+    }
+
+    @include media(">=1280px") {
+      flex-direction: column;
+      margin: 0 0 0 5rem;
+      width: 100%;
+      max-height: 94rem;
+      overflow: hidden;
+      overflow-y: auto;
+      transform: scaleX(-1);
+      padding-right: 5rem;
+    }
+
+    @include media(">=1440px") {
+      margin: 0 0 0 10rem;
+    }
+
+    @include media(">=full-hd") {
+      margin: 0 0 0 14.5rem;
+    }
+
+    &::-webkit-scrollbar {
+      display: block;
+      width: 7px;
+      background-color: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      display: block;
+      border-radius: 7px;
+      background: #393946;
+      border-radius: 44px;
+    }
+  }
+
+  &__img {
+    width: 100%;
+
+    @include media(">=tablet") {
+      &:first-child {
+        transform: rotate(2deg);
+        margin-right: -2rem;
+        margin-top: -1rem;
+        position: relative;
+        z-index: 1;
+
+        @include media(">=1280px") {
+          margin: 0;
+          transform: rotate(1deg) scaleX(-1);
+        }
+      }
+
+      &:last-child {
+        transform: rotate(-2deg);
+        margin-left: -2rem;
+
+        @include media(">=1280px") {
+          margin: 0;
+          transform: rotate(-1deg) scaleX(-1);
+        }
+      }
+    }
+
+    &.hide {
+      display: none;
+
+      @include media(">=tablet") {
+        display: block;
+      }
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+  }
+
+  &__logo {
+    width: 12rem;
+    margin-bottom: 3rem;
+
+    @include media(">=1280px") {
+      margin-bottom: 5rem;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+  }
+
+  &__text {
+    margin-bottom: 2rem;
+  }
+
+  &__btn {
+    width: max-content;
+    margin-top: 4rem;
+  }
+
+  &__info {
+    @include media(">=1280px") {
+      padding-top: 5rem;
+      width: 53rem;
+      flex: none;
+      margin-right: auto;
+
+      .case__images {
+        display: none;
+      }
+    }
+  }
+}

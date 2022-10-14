@@ -1,0 +1,99 @@
+.mission-section {
+  padding: 12rem 0 10rem;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("../images/mission-pattern-sm.svg");
+
+  @include media(">=tablet") {
+    padding: 14rem 0 9rem;
+    background-image: url("../images/abou-pattern-md.svg");
+  }
+
+  @include media(">=desktop") {
+    min-height: 100vh;
+    padding: 10rem 0 8rem;
+    background-image: url("../images/abou-pattern-lg.svg");
+  }
+}
+
+.about {
+  @include media(">=desktop") {
+    margin: auto 0;
+  }
+
+  &__wrap {
+    &.mission {
+      max-width: 58.6rem;
+      padding-right: 3rem;
+
+      @include media(">=desktop") {
+        max-width: 100%;
+        padding: 0;
+      }
+    }
+
+    &.exploration {
+      max-width: 47.6rem;
+      padding-right: 3rem;
+
+      @include media(">=desktop") {
+        max-width: 100%;
+        padding: 0;
+      }
+    }
+  }
+
+  &__title {
+    font-size: 3.4rem;
+    font-weight: 400;
+    line-height: 1.1;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+
+    @include media(">=tablet") {
+      font-size: 4.8rem;
+    }
+
+    @include media(">=widescreen") {
+      letter-spacing: 0.01em;
+      font-size: 8rem;
+    }
+
+    @include media(">=1640px") {
+      font-size: 10rem;
+    }
+  }
+
+  &__row {
+    display: flex;
+    flex-direction: column;
+
+    @include media(">=desktop") {
+      flex-direction: row;
+      align-items: flex-end;
+    }
+  }
+
+  &__title-col {
+    @include media(">=desktop") {
+      width: 64.6%;
+      padding-right: 2rem;
+    }
+
+    @include media(">=1640px") {
+      padding-right: 9rem;
+    }
+  }
+
+  &__text-col {
+    @include media(">=tablet") {
+      padding-right: 7rem;
+    }
+
+    @include media(">=desktop") {
+      padding: 0;
+      width: 36.4%;
+    }
+  }
+}

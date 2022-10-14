@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" class="theme-dark">
+  @@include('../partials/head/head.html')
+
+  <body>
+    <div class="wrapper">
+      @@include('../layout/header.html')
+      <main class="main">
+        <div class="pros-section">
+          <div class="container">
+            <button type="button" data-trigger="book-popup" class="btn primary medium js-show-popup mb-2">Book a consultation</button>
+            <button type="button" data-trigger="subscribe-popup" class="btn primary medium js-show-popup mb-2">Subscribe now</button>
+            <button type="button" data-trigger="thank-popup" class="btn primary medium js-show-popup mb-2">Thank you</button>
+            <button type="button" data-trigger="info-popup" class="btn primary medium js-show-popup">Tell about yourself</button>
+          </div>
+        </div>
+      </main>
+      @@include('../layout/footer.html')
+    </div>
+    @@include('../components/popup.html') @@include('../partials/scripts/common.html')
+  </body>
+</html>

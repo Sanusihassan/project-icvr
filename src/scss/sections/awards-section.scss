@@ -1,0 +1,313 @@
+.awards-section {
+  padding: 2rem 0 10rem;
+
+  @include media(">=tablet") {
+    padding: 2rem 0 8rem;
+  }
+
+  @include media(">=widescreen") {
+    padding: 2rem 0 16rem;
+  }
+}
+
+.awards-scroll {
+  overflow: hidden;
+  overflow-x: auto;
+  margin: 0 -3rem 4.5rem;
+  padding: 0 3rem;
+
+  @include media(">=tablet") {
+    margin: 0 -5rem 6rem;
+    padding: 0 5rem;
+  }
+
+  @include media(">=desktop") {
+    margin: 0 0 8rem;
+    padding: 0;
+    width: auto;
+    overflow: visible;
+    height: 33.5vw;
+    position: relative;
+  }
+
+  @include media(">=widescreen-lg") {
+    height: 39.5vw;
+  }
+
+  @include media(">=1640px") {
+    margin: -4rem 0 4.8rem;
+    height: 57.4rem;
+  }
+
+  &::-webkit-scrollbar,
+  &::-webkit-scrollbar-thumb {
+    display: none;
+  }
+}
+
+.awards-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin: 0 -0.75rem;
+  width: max-content;
+
+  @include media("<=tablet") {
+    margin: 5rem 0;
+  }
+
+  @include media(">=desktop") {
+    margin: 0;
+    width: auto;
+  }
+
+  &:nth-child(2) {
+    transform: translateX(-90px);
+  }
+
+  &+& {
+    margin-top: 3rem;
+  }
+
+  .award {
+    padding: 0 0.75rem;
+
+    @include media(">=desktop") {
+      padding: 0;
+    }
+  }
+}
+
+.award {
+  width: auto;
+  display: block;
+  flex: none;
+  z-index: 1;
+  cursor: pointer;
+  transition: $base-transition;
+
+  @include media(">=desktop") {
+    position: absolute;
+
+    &:hover {
+      z-index: 2;
+    }
+  }
+
+  &.one {
+    @include media(">=desktop") {
+      bottom: 0;
+      left: 37%;
+    }
+  }
+
+  &.two {
+    top: 42%;
+    left: 0;
+  }
+
+  &.three {
+    top: 25%;
+    left: 10.5%;
+  }
+
+  &.four {
+    top: 40%;
+    left: 12.5%;
+  }
+
+  &.five {
+    top: 6%;
+    right: 24%;
+  }
+
+  &.six {
+    bottom: 0;
+    right: 1.3%;
+  }
+
+  &.decor-one {
+    top: 10.5%;
+    left: 19.5%;
+    z-index: -1;
+    pointer-events: none;
+  }
+
+  &.decor-two {
+    bottom: -17%;
+    right: 14.8%;
+    z-index: -1;
+    pointer-events: none;
+  }
+
+  &__wrap {
+    width: 28rem;
+    height: 28rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 50%;
+
+    @include media(">=tablet") {
+      width: 21.8rem;
+      height: 21.8rem;
+    }
+
+    &.small {
+      @include media(">=desktop") {
+        width: 15rem;
+        height: 15rem;
+      }
+
+      @include media(">=widescreen-lg") {
+        width: 25rem;
+        height: 25rem;
+      }
+
+      .award__img {
+        width: 14rem;
+        margin-right: -1.6rem;
+
+        @include media(">=tablet") {
+          width: 12.4rem;
+        }
+
+        @include media(">=desktop") {
+          width: 9.1rem;
+        }
+
+        @include media(">=widescreen-lg") {
+          width: 13.4rem;
+        }
+      }
+    }
+
+    &.medium {
+      @include media(">=desktop") {
+        width: 15rem;
+        height: 15rem;
+      }
+
+      @include media(">=widescreen-lg") {
+        width: 25rem;
+        height: 25rem;
+      }
+
+      .award__img {
+        width: 13rem;
+
+        @include media(">=tablet") {
+          width: 12.1rem;
+        }
+
+        @include media(">=desktop") {
+          width: 8.1rem;
+        }
+
+        @include media(">=widescreen-lg") {
+          width: 17rem;
+        }
+      }
+    }
+
+    &.big {
+      @include media(">=widescreen") {
+        width: 35rem;
+        height: 35rem;
+      }
+
+      @include media(">=1640px") {
+        width: 43.6rem;
+        height: 43.6rem;
+      }
+
+      .award__img {
+        width: 10.9rem;
+
+        @include media(">=tablet") {
+          width: 8.4rem;
+        }
+
+        @include media(">=widescreen") {
+          width: 13.8rem;
+        }
+
+        @include media(">=1640px") {
+          width: 16.8rem;
+        }
+      }
+    }
+
+    &.decor {
+      @include media(">=widescreen") {
+        width: 27rem;
+        height: 27rem;
+      }
+
+      @include media(">=1640px") {
+        width: 44rem;
+        height: 44rem;
+      }
+    }
+  }
+}
+
+.awards-title {
+  font-weight: 700;
+  font-size: 2.8rem;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+
+  @include media(">=tablet") {
+    font-size: 3.4rem;
+    letter-spacing: 0.01em;
+  }
+
+  @include media(">=widescreen-lg") {
+    font-size: 4.4rem;
+  }
+}
+
+.awards-footer {
+  align-items: center;
+}
+
+.awards-title {
+  font-weight: 700;
+  font-size: 2.8rem;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+
+  @include media(">=tablet") {
+    font-size: 3.4rem;
+    line-height: 1.1;
+    letter-spacing: 0.01em;
+  }
+
+  @include media(">=widescreen-lg") {
+    line-height: 1;
+    font-size: 5.4rem;
+  }
+}
+
+.awards-text {
+  font-size: 1.3rem;
+  font-weight: 400;
+  line-height: 1.5;
+  font-family: $secondary-font;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+
+  @include media(">=tablet") {
+    font-size: 1.6rem;
+    line-height: 1;
+  }
+
+  @include media(">=widescreen-lg") {
+    font-size: 1.8rem;
+  }
+}

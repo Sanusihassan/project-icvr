@@ -1,0 +1,87 @@
+.status {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 4rem;
+  padding: 0.5rem 2.8rem;
+  font-weight: 500;
+  font-size: 1.2rem;
+  line-height: 1;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-family: $secondary-font;
+
+  @include media(">=tablet") {
+    min-height: 4.2rem;
+    font-size: 1.4rem;
+  }
+
+  &.online {
+    background-color: $error;
+  }
+}
+
+.date-status {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 3rem;
+  padding: 0.5rem 1.87rem;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1;
+  letter-spacing: 0.05em;
+  color: $base-bg;
+  background-color: $white;
+  text-transform: uppercase;
+  font-family: $secondary-font;
+
+  @include media(">=tablet") {
+    min-height: 3.2rem;
+  }
+  @include media(">=desktop") {
+    font-size: 1.1rem;
+    padding: 0.5rem 1.5rem;
+  }
+
+  &.big {
+    @include media(">=desktop") {
+      font-size: 1.4rem;
+      letter-spacing: 0.1em;
+      padding: 0.5rem 2.05rem;
+      min-height: 4.2rem;
+    }
+  }
+}
+
+.news-status {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 3.2rem;
+  padding: 0.5rem 1.5rem;
+  border-radius: 1px;
+  font-weight: 400;
+  font-size: 1.1rem;
+  line-height: 1;
+  letter-spacing: 0.05em;
+  color: rgba(225, 225, 225, 0.9);
+  text-transform: uppercase;
+  font-family: $secondary-font;
+
+  &.new {
+    background: #5956AB;
+  }
+
+  &.development {
+    background: #CE9237;
+  }
+
+  &.soc {
+    background: #017DBC;
+  }
+
+  &.art {
+    background: #D26FD5;
+  }
+}

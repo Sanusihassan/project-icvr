@@ -1,0 +1,228 @@
+.studies-section {
+  padding: 6rem 0 8rem;
+  position: relative;
+
+  @include media(">=tablet") {
+    padding: 12rem 0 10rem;
+  }
+
+  @include media(">=desktop") {
+    padding: 16.8rem 0 18rem;
+  }
+
+  .container {
+    padding: 0;
+    max-width: 1900px;
+
+    @include media(">=desktop") {
+      padding: 0 3rem 0 0;
+    }
+  }
+}
+
+.case-scroll {
+  overflow: hidden;
+  overflow-x: auto;
+  padding-bottom: 3rem;
+
+  @include media(">=desktop") {
+    width: auto;
+    overflow: visible;
+    min-height: 39.4vw;
+  }
+
+  @include media(">=1640px") {
+    height: 57.8rem;
+  }
+
+  &::-webkit-scrollbar,
+  &::-webkit-scrollbar-thumb {
+    display: none;
+  }
+}
+
+.case-row {
+  display: flex;
+  justify-content: center;
+  width: max-content;
+
+  @include media(">=desktop") {
+    flex-wrap: wrap;
+    width: auto;
+    justify-content: space-between;
+  }
+
+  @include media(">=widescreen-lg") {
+    //margin: 0 -2.5rem;
+  }
+  @include media(">=1640px") {
+    //margin: 0 -2.5rem 0 -8.5rem;
+  }
+}
+
+.study-case {
+  display: block;
+  z-index: 1;
+  opacity: 0.4;
+  transition: $base-transition;
+  margin: 0 -1rem;
+
+  @include media(">=widescreen-lg") {
+    padding: 0 2.5rem;
+  }
+
+  &.active{
+    left: 35%;
+    transition: $base-transition;
+    @include media("<=tablet") {
+      left: 5rem;
+    }
+  }
+
+  &.active,
+  &:hover {
+    z-index: 2;
+    opacity: 1;
+    transition: $base-transition;
+
+    @include media(">=1640px") {
+      transform: scale(1.05);
+
+      .study-case__title {
+        font-size: 4.2rem;
+      }
+    }
+
+    .study-case__text {
+      font-size: 1.2rem;
+
+      @include media(">=tablet") {
+        font-size: 1.3rem;
+      }
+    }
+
+    .study-case__img {
+      filter: drop-shadow(0px 62px 100px rgba(0, 0, 0, 0.3));
+      -webkit-filter: drop-shadow(0px 62px 100px rgba(0, 0, 0, 0.3));
+    }
+  }
+  
+
+  &:nth-child(2n) {
+    margin-top: 5rem;
+
+    @include media(">=tablet") {
+      margin-top: 7rem;
+    }
+
+    @include media(">=widescreen") {
+      margin-top: 0;
+    }
+  }
+
+  &.bottom {
+    @include media(">=desktop") {
+      padding: 0 5rem;
+      margin: -6rem auto 0 auto;
+    }
+    @include media(">=1640px") {
+      margin: -13rem auto 0 auto;
+    }
+  }
+
+  &__img {
+    display: block;
+    flex: none;
+
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    &.big {
+      width: 26.4rem;
+      height: 24.5rem;
+
+      @include media(">=tablet") {
+        width: 49rem;
+        height: 34rem;
+      }
+
+      @include media(">=1640px") {
+        width: 81rem;
+        height: 50rem;
+      }
+    }
+
+    &.medium {
+      max-width: 27.9rem;
+      height: 40vw;
+
+      @include media(">=tablet") {
+        max-width: 26rem;
+        height: 33.8vw;
+      }
+
+      @include media(">=desktop") {
+        height: 22.5vw;
+        max-width: 43.2rem;
+      }
+    }
+
+    &.circle {
+      border-radius: 50%;
+      overflow: hidden;
+      width: 16rem;
+      height: 16rem;
+
+      @include media(">=tablet") {
+        width: 27.5rem;
+        height: 27.5rem;
+      }
+
+      @include media(">=widescreen") {
+        width: 347px;
+        height: 347px;
+      }
+
+      &.small {
+        @include media(">=desktop") {
+          width: 272.19px;
+          height: 273px;
+        }
+      }
+    }
+
+    &.extra {
+      width: 280px;
+      height: 180px;
+    }
+  }
+
+  &__title {
+    font-weight: 800;
+    font-size: 2.5rem;
+    line-height: 1;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    transition: $base-transition;
+    color: $white;
+  }
+
+  &__text {
+    font-family: $secondary-font;
+    font-weight: 500;
+    font-size: 0.8rem;
+    line-height: 1.5;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    opacity: 0.4;
+    transition: $base-transition;
+
+    @include media("<=tablet") {
+      font-size: 1.1rem;
+    }
+  }
+}

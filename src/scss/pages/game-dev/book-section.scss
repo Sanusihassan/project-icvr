@@ -1,0 +1,88 @@
+.book-section {
+  padding: 6rem 0;
+  background-color: rgba(20, 20, 33, 0.7);
+
+  @include media(">=tablet") {
+    padding: 9rem 0;
+  }
+
+  @include media(">=desktop") {
+    padding: 1rem 0 2rem;
+    background-color: transparent;
+  }
+}
+
+.banner {
+
+  &__wrap {
+    display: flex;
+    justify-content: space-between;
+
+    @include media(">=desktop") {
+      align-items: center;
+      padding: 4rem 8rem;
+      background-color: $section-bg;
+      overflow: hidden;
+    }
+    @include media(">=widescreen") {
+      flex-direction: row-reverse;
+      padding: 4rem 3rem;
+    }
+
+    @include media(">=widescreen-lg") {
+      padding: 4rem 8rem;
+    }
+  }
+
+  &__body {
+    width: 100%;
+    @include media(">=widescreen") {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+
+  &__title {
+    @include media(">=widescreen") {
+      min-width: 28rem;
+    }
+  }
+
+  &__text {
+    max-width: 24rem;
+
+    @include media(">=tablet") {
+      max-width: 32.5rem;
+    }
+  }
+
+  &__img {
+    width: 22.3rem;
+    margin-left: 2.5rem;
+
+    @include media(">=widescreen") {
+      width: 21rem;
+      margin: 0 4rem -4rem 0;
+    }
+
+    @include media(">=widescreen-lg") {
+      width: 28.7rem;
+    }
+  }
+
+  &__btn {
+    @include media(">=tablet") {
+      min-width: 31.5rem;
+    }
+
+    @include media(">=widescreen") {
+      min-width: 24rem;
+      margin-left: auto;
+    }
+
+    @include media(">=widescreen-lg") {
+      min-width: 30rem;
+    }
+  }
+}

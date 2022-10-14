@@ -1,0 +1,72 @@
+.contacts-section {
+  padding: 11rem 0 6.3rem;
+  height: 100vh;
+  background-image: url("../images/contacts-bg-sm.svg");
+  background-size: cover;
+  background-position: bottom center;
+  background-repeat: no-repeat;
+
+  @include media(">=tablet") {
+    padding: 14rem 0 6rem;
+    background-image: url("../images/contacts-bg-md.svg");
+  }
+
+  @include media(">=desktop") {
+    padding: 18rem 0 4rem;
+    background-image: url("../images/contacts-bg-lg.svg");
+    background-position: center right;
+  }
+}
+
+.contacts {
+
+  &__wrap {
+    @include media(">=widescreen") {
+      justify-content: center;
+    }
+  }
+
+  &__info {
+    @include media(">=tablet") {
+      display: flex;
+      align-items: center;
+    }
+
+    @include media(">=widescreen") {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .contact+.contact {
+      margin-top: 30px;
+
+      @include media(">=tablet") {
+        margin: 0 0 0 60px;
+      }
+
+      @include media(">=widescreen") {
+        margin: 40px 0 0 0;
+      }
+    }
+  }
+
+  &__soc {
+    display: flex;
+    justify-content: center;
+
+    @include media(">=desktop") {
+      justify-content: flex-start;
+    }
+
+    @include media(">=widescreen") {
+      margin-top: 0 !important;
+    }
+
+    .soc-link {
+
+      @include media(">=tablet") {
+        margin-right: 45px;
+      }
+    }
+  }
+}

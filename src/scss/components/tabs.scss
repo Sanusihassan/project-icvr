@@ -1,0 +1,316 @@
+.tabs {
+  @include media(">=widescreen") {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+  }
+
+  &__header-wrap {
+    position: relative;
+    z-index: 1;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 6px;
+      width: calc(100% + 40px);
+      left: 50%;
+      transform: translateX(-50%);
+      height: 1px;
+      background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 34.91%, rgba(255, 255, 255, 0) 102.63%);
+      opacity: 0.5;
+      z-index: 1;
+
+      @include media(">=widescreen") {
+        background-image: url('../images/tab-circle.svg');
+        background-position: center bottom;
+        background-size: contain;
+        background-repeat: no-repeat;
+        height: 153px;
+        width: 200px;
+        bottom: 0;
+      }
+    }
+  }
+
+  &__header {
+    display: flex;
+    overflow: hidden;
+    overflow-x: auto;
+    margin: 0 -3rem;
+    padding: 0 3rem 2.1rem;
+
+    @include media(">=desktop") {
+      margin: 0 auto;
+      width: fit-content;
+    }
+
+    @include media(">=widescreen") {
+      overflow: visible;
+      position: relative;
+      height: 153px;
+      width: 200px;
+      padding: 0;
+      //animation: spin 15s infinite linear;
+      //transform-origin: 50% 100px;
+    }
+
+    &::-webkit-scrollbar,
+    &::-webkit-scrollbar-thumb {
+      display: none !important;
+    }
+  }
+
+  &__btn {
+    font-weight: 400;
+    font-size: 2rem;
+    line-height: 1.3;
+    letter-spacing: 0.02em;
+    color: rgba(225, 225, 225, 0.3);
+    transition: $base-transition;
+    cursor: pointer;
+    position: relative;
+    height: fit-content;
+
+    @include media(">=widescreen") {
+      position: absolute;
+      font-size: 2.2rem;
+      z-index: 10;
+
+      &:nth-child(1) {
+        transform: rotate(-91deg);
+        bottom: 35px;
+        left: -65px;
+      }
+
+      &:nth-child(2) {
+        transform: rotate(-46deg);
+        top: -8px;
+        left: -32px;
+      }
+
+      &:nth-child(3) {
+        transform: rotate(0deg);
+        top: -55px;
+        left: 70px;
+      }
+
+      &:nth-child(4) {
+        transform: rotate(50deg);
+        top: -10px;
+        right: -30px;
+      }
+
+      &:nth-child(5) {
+        transform: rotate(94deg);
+        bottom: 28px;
+        right: -65px;
+      }
+
+      &:nth-child(6) {
+        transform: rotate(138deg);
+        bottom: -66px;
+        right: -29px;
+      }
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: calc(100% + 10px);
+      left: 50%;
+      transform: translateX(-50%);
+      width: 9px;
+      height: 9px;
+      background-color: $white;
+      border-radius: 22px;
+      transition: $base-transition;
+      opacity: 0;
+
+      @include media(">=widescreen") {
+        border-radius: 4px;
+        height: 20px;
+        width: 1px;
+      }
+    }
+
+    &:hover {
+      color: $white;
+    }
+
+    &+& {
+      margin-left: 40px;
+
+      @include media(">=tablet") {
+        margin-left: 60px;
+      }
+
+      @include media(">=widescreen") {
+        margin: 0;
+      }
+    }
+
+    &.active {
+      color: $white;
+
+      @include media(">=widescreen") {
+        font-size: 2.4rem;
+      }
+
+      &::after {
+        opacity: 1;
+      }
+    }
+  }
+
+  &__content {
+    display: none;
+    padding-top: 2rem;
+
+    @include media(">=tablet") {
+      padding-top: 3rem;
+    }
+
+    &.active {
+      display: block;
+    }
+  }
+}
+
+.tab-board {
+
+  &__wrap {
+    @include media(">=tablet") {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    @include media(">=widescreen") {
+      justify-content: center;
+      align-items: start;
+      padding-bottom: 8rem;
+      min-height: 40rem;
+    }
+
+    @include media(">=1640px") {
+      min-height: 60rem;
+    }
+  }
+
+  &__img-mob {
+    height: 63.7vw;
+    display: block;
+    flex: none;
+    margin: 0 -3rem;
+
+    @include media(">=tablet") {
+      margin: 0 -5rem 0 0;
+      height: auto;
+      width: 48.9%;
+    }
+
+    img {
+      height: 100%;
+      width: 100%;
+      display: block;
+      object-fit: cover;
+    }
+  }
+
+  &__img-desk {
+    position: absolute;
+    z-index: -1;
+
+    &.one {
+      left: 0;
+      top: 15%;
+      width: 36%;
+    }
+
+    &.two {
+      left: 0;
+      bottom: 5%;
+      width: 20%;
+    }
+
+    &.three {
+      right: 0;
+      bottom: 0;
+      width: 35%;
+    }
+
+    &.left {
+      left: 0;
+      bottom: 0;
+      width: 33%;
+    }
+
+    &.right {
+      right: 0;
+      bottom: 0;
+      width: 32%;
+    }
+  }
+
+  &__content {
+    max-width: 33.4rem;
+    padding-right: 2rem;
+
+    @include media(">=tablet") {
+      padding-right: 0;
+    }
+
+    @include media(">=desktop") {
+
+      &.grows {
+        max-width: 36.7rem;
+      }
+
+      &.model {
+        max-width: 47.3rem;
+      }
+    }
+  }
+
+  &__title {
+    font-size: 3.4rem;
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+
+    @include media(">=widescreen-lg") {
+      line-height: 1;
+      font-weight: 500;
+      font-size: 8rem;
+    }
+  }
+
+  &__text {
+    @include media(">=widescreen") {
+      position: absolute;
+    }
+
+    &.left {
+      bottom: 25%;
+      left: 25%;
+    }
+
+    &.right {
+      top: 24%;
+      right: 10%;
+    }
+  }
+
+  .base-text+.base-text {
+    margin-top: 1.5rem;
+  }
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(1turn);
+  }
+}

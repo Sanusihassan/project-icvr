@@ -1,0 +1,65 @@
+.tags-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -1.5rem -1.5rem 0;
+
+  .tag,
+  .tag-btn {
+    margin: 0 1.5rem 1.5rem 0;
+  }
+}
+
+.tag-btns-wrap {
+  display: flex;
+  margin: 0 -1.4rem 0 0;
+
+  .tag-btn {
+    margin: 0 1.4rem 0 0;
+  }
+}
+
+.tag {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(217, 217, 217, 0.1);
+  border: 1px solid rgba(119, 119, 131, 0.3);
+  border-radius: 10px;
+  min-height: 3.2rem;
+  font-family: $secondary-font;
+  font-weight: 400;
+  font-size: 1.1rem;
+  line-height: 1;
+  letter-spacing: 0.05em;
+  padding: 0.5rem 1.4rem;
+  color: rgba(225, 225, 225, 0.9);
+}
+
+.tag-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #777783;
+  border-radius: 10px;
+  min-height: 3.1rem;
+  font-family: $secondary-font;
+  font-weight: 400;
+  font-size: 1.1rem;
+  line-height: 1;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 0.5rem 1.4rem;
+  color: rgba(225, 225, 225, 0.9);
+  transition: $base-transition;
+
+  &:hover {
+    background: rgba(217, 217, 217, 0.1);
+  }
+
+  &.big {
+    @include media(">=widescreen-lg") {
+      font-size: 1.3rem;
+      min-height: 4.3rem;
+    }
+  }
+}

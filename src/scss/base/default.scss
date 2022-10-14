@@ -1,0 +1,81 @@
+* {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+html {
+  font-size: 10px;
+  box-sizing: border-box;
+}
+
+body {
+  @include font-smoothing(on);
+  font-family: $primary-font;
+  min-width: 320px;
+  background-color: $base-bg;
+  color: $white;
+  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
+
+  &.overflow {
+    overflow: hidden;
+  }
+}
+
+.wrapper {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+
+  &.visible {
+    overflow: visible;
+  }
+}
+
+.main {
+  flex: 1 1 auto;
+}
+
+.container {
+  width: 100%;
+  max-width: 1860px;
+  padding: 0 3rem;
+  margin: 0 auto;
+
+  @include media(">=tablet") {
+    padding: 0 5rem;
+  }
+
+  &.home-page {
+    max-width: 1821px;
+  }
+
+  &.small {
+    max-width: 163.8rem;
+  }
+}
+
+// Scroll
+.scroll-wrap::-webkit-scrollbar {
+  display: block;
+  width: 4px;
+  background-color: rgba(119, 119, 131, 0.14);
+}
+
+.scroll-wrap::-webkit-scrollbar-thumb {
+  display: block;
+  border-radius: 5px;
+  background-color: rgba(225, 225, 225, 0.64);
+}
+
+.scroll-wrap {
+  scrollbar-color: rgba(225, 225, 225, 0.64) rgba(119, 119, 131, 0.14);
+  scrollbar-width: thin;
+}
+
+// Media
+// @include media(">=desktop") {
+
+// }

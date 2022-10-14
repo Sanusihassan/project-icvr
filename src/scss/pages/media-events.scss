@@ -1,0 +1,168 @@
+.events-section {
+  padding: 2.7rem 0 6rem;
+
+  @include media(">=tablet") {
+    padding: 4rem 0 10rem;
+  }
+
+  @include media(">=widescreen") {
+    padding: 7rem 0 10rem;
+  }
+}
+
+.top-event {
+  margin: 0 -3rem 6rem;
+
+  @include media(">=tablet") {
+    margin: 0 -5rem 10rem;
+  }
+
+  @include media(">=widescreen") {
+    margin: 0 0 10rem;
+  }
+
+  &__wrap {
+    padding: 4rem 3rem 6rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 62rem;
+    position: relative;
+
+    @include media(">=tablet") {
+      height: 65rem;
+      padding: 6.5rem;
+    }
+
+    @include media(">=desktop") {
+      height: 68.5rem;
+      padding: 7rem 5rem 6.7rem;
+    }
+
+    &:after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      height: 28.1rem;
+      width: 100%;
+      background: linear-gradient(180deg, rgba(28, 25, 25, 0) 0%, #1C1919 100%);
+      opacity: 0.6;
+      border-radius: 2px;
+      z-index: 1;
+
+      @include media(">=tablet") {
+        height: 41.3rem;
+      }
+
+      @include media(">=desktop") {
+        height: 42.6rem;
+      }
+    }
+  }
+
+  &__body {
+    width: 100%;
+    position: relative;
+    z-index: 2;
+
+    @include media(">=tablet") {
+      align-items: center;
+    }
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 2.8rem;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+
+    @include media(">=tablet") {
+      font-size: 3.4rem;
+      letter-spacing: 0.01em;
+    }
+
+    @include media(">=widescreen") {
+      font-size: 4.4rem;
+    }
+  }
+}
+
+.events-btn {
+  @include media(">=tablet") {
+    min-width: 31.5rem;
+  }
+}
+
+.subscribe-section {
+  padding: 6rem 0;
+  background-color: $section-bg;
+
+  @include media(">=tablet") {
+    padding: 8rem 0 9rem;
+  }
+
+  @include media(">=desktop") {
+    background-color: transparent;
+  }
+
+  @include media(">=widescreen") {
+    padding: 5rem 0 7rem;
+  }
+}
+
+.subscribe-section {
+  padding: 6rem 0;
+  background-color: $section-bg;
+
+  @include media(">=tablet") {
+    padding: 8rem 0 9rem;
+  }
+
+  @include media(">=desktop") {
+    background-color: transparent;
+  }
+
+  @include media(">=widescreen") {
+    padding: 5rem 0 7rem;
+  }
+}
+
+.subscribe {
+
+  &__wrap {
+    @include media(">=widescreen") {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+
+  &__title {
+    max-width: 53.7rem;
+  }
+
+  &__form {
+    width: 100%;
+    @include media(">=desktop") {
+      max-width: 66.5rem;
+    }
+  }
+}
+
+.article-section {
+  padding: 2rem 0 0;
+
+  @include media(">=tablet") {
+    padding: 4rem 0 0;
+  }
+
+  @include media(">=widescreen") {
+    padding: 8rem 0 0;
+  }
+}
