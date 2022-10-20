@@ -9,7 +9,7 @@ Install Dependencies:
 npm install
 ```
 ### Step 3
-Run The Project
+Run The Project:
 ```bash
 gulp
 ```
