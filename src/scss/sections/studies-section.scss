@@ -18,6 +18,12 @@
       padding: 0 3rem 0 0;
     }
   }
+  #carousel  {
+    overflow: initial !important;
+    & > * {
+      opacity: 1!important;
+    }
+  }
 }
 
 .case-scroll {

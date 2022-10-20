@@ -35,6 +35,33 @@
   background-position: center;
   background-repeat: no-repeat;
   background-image: url("../images/home-intro-sm.webp");
+  // zoom animation
+  &.zoom {
+    animation: zoom-in 1.5s forwards ease-in-out;
+  }
+  &.zoom-out {
+    animation: zoom-out 1.5s forwards ease-in-out;
+  }
+  @keyframes zoom-in {
+    from {
+      background-position-x: 50%;
+      background-size: 125%;
+    }
+    to {
+      background-position-x: 50%;
+      background-size: 150%;
+    }
+  }
+  @keyframes zoom-out {
+    from {
+      background-position-x: 50%;
+      background-size: 150%;
+    }
+    to {
+      background-position-x: 50%;
+      background-size: 125%;
+    }
+  }
   height: 82.1rem;
   padding: 13.7rem 0 5.7rem;
 
@@ -46,9 +73,9 @@
     background: #20202C;
   }
   &.scrolled {
-    width: 60%;
-    transform-origin: center;
-    transform: rotate(180deg);
+    // width: 60%;
+    // transform-origin: center;
+    // transform: rotate(180deg);
   }
 
   @include media(">=tablet") {
