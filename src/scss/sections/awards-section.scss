@@ -13,9 +13,9 @@
 .awards-scroll {
   overflow: initial !important;
   overflow-x: auto;
-  margin: 0 -3rem 4.5rem;
+  // margin: 0 -3rem 4.5rem;
   padding: 0 3rem;
-  & > * {transform-origin: center !important;}
+  // & > * {transform-origin: center !important;}
   @include media(">=tablet") {
     margin: 0 -5rem 6rem;
     padding: 0 5rem;
@@ -30,6 +30,7 @@
     position: relative;
   }
 
+  height: 60vh;
   @include media(">=widescreen-lg") {
     height: 39.5vw;
   }
@@ -51,12 +52,19 @@
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  margin: 0 -0.75rem;
-  width: max-content;
-
-  @include media("<=tablet") {
-    margin: 5rem 0;
+  // margin: 0 -0.75rem;
+  width: 100%;
+  .pseudo {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
   }
+  // @include media("<=tablet") {
+  //   margin: 5rem 0;
+  // }
 
   @include media(">=desktop") {
     margin: 0;
@@ -67,13 +75,12 @@
     transform: translateX(-90px);
   }
 
-  &+& {
-    margin-top: 3rem;
-  }
+  // &+& {
+  //   margin-top: 3rem;
+  // }
 
   .award {
     padding: 0 0.75rem;
-
     @include media(">=desktop") {
       padding: 0;
     }
@@ -88,7 +95,39 @@
   z-index: 1;
   cursor: pointer;
   transition: $base-transition;
-
+  // .front class with zoom hover
+  .description {
+    transition: .5s;
+    opacity: 0;
+  }
+  & > .award__wrap {
+    transition: .3s ease-in-out;
+    @include media(">=desktop") {
+      margin-left: 150px;
+    }
+    @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+      &.cstm {
+        .award__img {
+          width: 10.9rem;
+        }
+      }
+    }
+  }
+  &.front {
+    // zoom: 1.1;
+    // scale: 1.1;
+    & > .award__wrap {
+      scale: 1.4;
+      &:hover + .description {
+        opacity: 1;
+      }
+    }
+    // &:hover {
+    //   & > .award__wrap {
+    //     scale: 1.6;
+    //   }
+    // }
+  }
   @include media(">=desktop") {
     // position: absolute;
 
@@ -144,8 +183,13 @@
   }
 
   &__wrap {
-    width: 28rem;
-    height: 28rem;
+    width: 18rem;
+    height: 18rem;
+    
+    @include media(">=tablet") {
+      width: 28rem;
+      height: 28rem;
+    }
     display: flex;
     align-items: center;
     justify-content: center;

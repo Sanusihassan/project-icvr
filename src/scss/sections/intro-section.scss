@@ -96,6 +96,24 @@
     min-height: auto;
     height: 100vh;
   }
+  // view cursor
+  span.view {
+    display: inline-block;
+    opacity: 0;
+    transition: opacity .3s;
+    width: 4.5em;
+    height: 4.5em;
+    border: 1.5px solid white;
+    border-radius: 50%;
+    box-sizing: border-box;
+    text-align: center;
+    line-height: 4.5em;
+    background: #ffffff33;
+    font-size: 1.3em;
+    font-weight: 400;
+    position: absolute;
+    z-index: 999999999999;
+  }
 }
 
 .intro-about-section {
@@ -295,10 +313,10 @@
   transform-style: preserve-3d;
   display: flex;
   align-items: center;
-  @include media("<=tablet") {
-    margin-top: 85%;
-    margin-bottom: 100%;
-  }
+  // @include media("<=tablet") {
+  //   margin-top: 85%;
+  //   margin-bottom: 100%;
+  // }
 }
 
 .study-case {

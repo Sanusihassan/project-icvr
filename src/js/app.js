@@ -164,7 +164,19 @@ $(document).on('click', '#immersive', function (event) {
   $('.introPlay__playBE').toggleClass('active');
   $('.intro-home-section').toggleClass('intro-home-section__active').show('slow');
 });
-
+// the custom view cursor function
+let viewEl = $('.intro-home-section span.view');
+$(document).mousemove(function (e) {
+  viewEl.css({
+    left: e.pageX,
+    top: e.pageY,
+  });
+});
+function customViewCursor() {
+  viewEl.css({
+    opacity: 1,
+  });
+}
 // Onclick button
 $('.backgroundVideo').css('opacity', 0);
 const docStyle = document.body.style;
@@ -173,10 +185,12 @@ $(document).on('click', '#bookconsultation', function (event) {
   // remove zoom effect
   $('section#intro-home-section').addClass('zoom-out');
   $('#introSection').fadeOut();
-  $('.backgroundVideo').animate({ opacity: 1 }, 1500, function () {
-    // change cursor to image
-    if (!docStyle.cursor) docStyle.cursor = `url('/assets/images/cursor.png'), default`;
-    else docStyle.cursor = null;
+  $('.backgroundVideo').animate({ opacity: 1 }, function () {
+    // change cursor to view element
+    if (!docStyle.cursor) {
+      docStyle.cursor = `none`;
+      customViewCursor();
+    } else docStyle.cursor = null;
     $('.backgroundVideo').toggleClass('active');
     $('.intro-home-section').toggleClass('videoStarted');
     $('.intro__contacts, .introPlay').css('display', 'none');
@@ -202,6 +216,9 @@ let scrollDown = (function () {
       $('html,body').animate({ scrollTop: studiesSection.offset().top + studiesSection.css('padding-top').replace('px', '') }, 'slow');
       // change cursor back to where it is
       docStyle.cursor = 'default';
+      viewEl.css({
+        opacity: 0,
+      });
       // $('.caseStudies').animate();
     }
   };
@@ -232,16 +249,31 @@ function scrollBanner() {
 //   bringToFront: true,
 //   speed: 6,
 // });
+// TODO: make custom auto carousel
 $('#carousel').Cloud9Carousel({
-  yRadius: 60,
+  // yRadius: 60,
   speed: 3,
+  // mirror: {
+  //   gap: 3,
+  //   height: 0.23,
+  // },
+
+  yOrigin: 42,
+  yRadius: 48,
   mirror: {
-    gap: 3,
-    height: 0.23,
+    gap: 12,
+    height: 0.2,
   },
-  buttonLeft: $('#nav-left'),
-  buttonRight: $('#nav-right'),
   bringToFront: true,
+  scaleTo: 1.5,
+  onRendered: function (carousel) {
+    // if ($(window).width() < 700) {
+    // this.xOrigin = $('.awards-flat-carousel').width() / 8;
+    // this.yOrigin = $('.awards-flat-carousel').height() / 3;
+    // }
+    // console.log(this.items);
+  },
+  autoPlay: 1,
 });
 // $(document).on('click', '.study-case', function (event) {
 //   event.preventDefault();
@@ -332,19 +364,36 @@ $(function () {
 //   //   showcase.fadeIn(1500)
 //   // }
 // })
-// let awardsHeight = $('.awards-flat-carousel').height(),
-//   awardsWidth = $('.awards-flat-carousel').height();
+let awardsHeight = $('.awards-flat-carousel').height(),
+  awardsWidth = $('.awards-flat-carousel').height();
+let isDesktop = $(window).width() >= 992;
 // console.log(awardsWidth *);
 $('.awards-flat-carousel').Cloud9Carousel({
-  yRadius: 60,
-  speed: 3,
+  yOrigin: 50,
+  // xOrigin: 10,
+  yRadius: 80,
+  xRadius: 210,
+
   mirror: {
-    gap: 3,
-    height: 0.23,
+    gap: 12,
+    height: 0.2,
   },
-  buttonLeft: $('#nav-left'),
-  buttonRight: $('#nav-right'),
+  speed: 3,
   bringToFront: true,
+  frontItemClass: 'front',
+  autoPlay: 1,
+  onRendered: function (carousel) {
+    let frontElWrap = $('.awards-flat-carousel .front .award__wrap');
+    let pseudoEl = document.querySelector('.awards-scroll .front .pseudo');
+    $(pseudoEl).css({ width: frontElWrap.width(), height: frontElWrap.height() });
+    let s = getComputedStyle(pseudoEl);
+    $('.awards-flat-carousel .front .award__wrap').css({
+      marginLeft: s.marginLeft,
+      // marginRight: s.marginRight,
+    });
+    // if (isDesktop) {
+    // }
+  },
 });
 // $('.awards-flat-carousel').Cloud9Carousel({
 //   autoPlay: 1,

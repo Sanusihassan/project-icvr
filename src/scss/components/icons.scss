@@ -3,8 +3,11 @@
   flex: none;
 
   img {
-    width: 100%;
-    display: block;
+    // width: 100%;
+    // display: block;
+    max-width: 100%;
+    height: auto;
+    padding: 5px;
   }
 }
 
