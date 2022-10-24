@@ -3,7 +3,7 @@
 // For import ES6+ with transpiling to ES5, put sources into 'es6' array
 module.exports = {
   es5: [
-    // './node_modules/jquery/dist/jquery.js',
+    './node_modules/jquery/dist/jquery.js',
     // './node_modules/validate.js/validate.js',
     './node_modules/swiper/swiper-bundle.min.js',
     //select choices

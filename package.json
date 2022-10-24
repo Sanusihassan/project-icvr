@@ -66,6 +66,7 @@
     "gsap": "^3.11.3",
     "include-media": "^1.4.9",
     "inputmask": "^5.0.6",
+    "jquery": "^3.6.1",
     "normalize.css": "^8.0.1",
     "swiper": "^6.4.6",
     "validate.js": "^0.13.1"
