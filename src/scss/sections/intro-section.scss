@@ -72,11 +72,11 @@
   &.videoStarted{
     background: #20202C;
   }
-  &.scrolled {
+  // &.scrolled {
     // width: 60%;
     // transform-origin: center;
     // transform: rotate(180deg);
-  }
+  // }
 
   @include media(">=tablet") {
     background-image: url("../images/home-intro-md.webp");
