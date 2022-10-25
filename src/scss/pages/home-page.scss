@@ -1457,7 +1457,7 @@ input:focus::placeholder {
 .nav {
   position: fixed;
   top: 0;
-  right: -100%;
+  right: calc(-100% - 3rem);
   width: 100vw;
   height: 100vh;
   padding: 2rem 3rem;

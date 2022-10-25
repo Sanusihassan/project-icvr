@@ -58,8 +58,12 @@
     justify-content: space-between;
   }
 
-  @include media(">=widescreen-lg") {
-    //margin: 0 -2.5rem;
+  @include media("<=tablet") {
+    position: relative;
+    width: 100%;
+    height: -webkit-fill-available;
+    height: 50vh;
+    text-align: center;
   }
   @include media(">=1640px") {
     //margin: 0 -2.5rem 0 -8.5rem;

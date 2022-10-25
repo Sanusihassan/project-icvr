@@ -103,7 +103,7 @@
   & > .award__wrap {
     transition: .3s ease-in-out;
     @include media(">=desktop") {
-      margin-left: 150px;
+      margin: auto;
     }
     @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
       &.cstm {
@@ -117,8 +117,11 @@
     // zoom: 1.1;
     // scale: 1.1;
     & > .award__wrap {
-      scale: 1.4;
-      &:hover + .description {
+      scale: 2;
+      @include media(">=desktop") {
+        scale: 2.3;
+      }
+      & + .description {
         opacity: 1;
       }
     }

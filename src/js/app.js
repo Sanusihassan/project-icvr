@@ -138,19 +138,16 @@ import './helpers/jquery.hover3d.min';
 
 // Navmenu
 $('ul.sub-menu').hide();
-$('ul.menu__list > li, ul.sub-menu > li').hover(
-  function () {
-    if ($('> ul.sub-menu', this).length > 0) {
-      $('> ul.sub-menu', this).stop().slideDown('slow');
-    }
-  },
-  function () {
-    if ($('> ul.sub-menu', this).length > 0) {
-      $('> ul.sub-menu', this).stop().slideUp('slow');
-    }
+$('ul.menu__list > li, ul.sub-menu > li').on('click', function () {
+  if ($(this).find('.sub-menu').length > 0) {
+    $(this).find('.sub-menu').slideDown('slow').attr('data-slided', true);
   }
-);
-
+});
+$(window).on('click', function (e) {
+  if (!e.target.classList.contains('menu__link')) {
+    $('.sub-menu[data-slided="true"]').slideUp('slow').attr('data-slided', false);
+  }
+});
 // Onclick submenu
 $('#introSection').hide();
 
@@ -250,14 +247,19 @@ function scrollBanner() {
 //   speed: 6,
 // });
 // TODO: make custom auto carousel
-$('#carousel').Cloud9Carousel({
-  // yRadius: 60,
-  speed: 3,
-  // mirror: {
-  //   gap: 3,
-  //   height: 0.23,
-  // },
+let isDesktop = $(window).width() >= 992;
+/*
+  mobile freindliness code
+  yOrigin: 50,
+  yRadius: 80,
+  xRadius: 210,
 
+  mirror: {
+    gap: 12,
+    height: 0.2,
+  },
+*/
+let desktopOptions = {
   yOrigin: 42,
   yRadius: 48,
   mirror: {
@@ -266,15 +268,36 @@ $('#carousel').Cloud9Carousel({
   },
   bringToFront: true,
   scaleTo: 1.5,
-  onRendered: function (carousel) {
-    // if ($(window).width() < 700) {
-    // this.xOrigin = $('.awards-flat-carousel').width() / 8;
-    // this.yOrigin = $('.awards-flat-carousel').height() / 3;
-    // }
-    // console.log(this.items);
-  },
   autoPlay: 1,
-});
+};
+let mobileOptions = {
+  yOrigin: 0,
+  xOrigin: 150,
+  yRadius: 80,
+  xRadius: 210,
+  mirror: {
+    gap: 12,
+    height: 0.2,
+  },
+  bringToFront: true,
+  scaleTo: 1.5,
+  autoPlay: 1,
+  speed: 3,
+};
+$('#carousel').Cloud9Carousel(!isDesktop ? mobileOptions : desktopOptions);
+/*
+default configs
+{
+  speed: 3,
+  mirror: {
+    gap: 12,
+    height: 0.2,
+  },
+  bringToFront: true,
+  scaleTo: 1.5,
+  autoPlay: 1,
+}
+*/
 // $(document).on('click', '.study-case', function (event) {
 //   event.preventDefault();
 //   $('.caseStudies').attr('data-case-center', this.id);
@@ -366,7 +389,6 @@ $(function () {
 // })
 let awardsHeight = $('.awards-flat-carousel').height(),
   awardsWidth = $('.awards-flat-carousel').height();
-let isDesktop = $(window).width() >= 992;
 // console.log(awardsWidth *);
 $('.awards-flat-carousel').Cloud9Carousel({
   yOrigin: 50,
@@ -387,6 +409,7 @@ $('.awards-flat-carousel').Cloud9Carousel({
     let pseudoEl = document.querySelector('.awards-scroll .front .pseudo');
     $(pseudoEl).css({ width: frontElWrap.width(), height: frontElWrap.height() });
     let s = getComputedStyle(pseudoEl);
+
     $('.awards-flat-carousel .front .award__wrap').css({
       marginLeft: s.marginLeft,
       // marginRight: s.marginRight,
